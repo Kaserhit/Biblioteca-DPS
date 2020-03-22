@@ -1,0 +1,14 @@
+C:\Users\FSALAS\Desktop\ULACIT\01 PROGRAMACIÓN ORIENTADA A OBJETOS\CLASE\CLASE07 - MODULARIDAD Y ENCAPSULAMIENTO\MiBanco\MiBanco\MiBanco\bin\Release\MiBanco.exe.config
+C:\Users\FSALAS\Desktop\ULACIT\01 PROGRAMACIÓN ORIENTADA A OBJETOS\CLASE\CLASE08 - HERENCIA Y POLIMORFISMO\MiBanco\MiBanco\MiBanco\bin\Release\MiBanco.exe.config
+C:\BACKUP\02 Personal\UNIVERSIDAD\ULACIT\02 DISEÑO APLICACIONES\CLASES\CLASE04 - Polimorfismo\MiBanco\MiBanco\MiBanco\MiBanco\bin\Release\MiBanco.exe.config
+C:\BACKUP\02 Personal\UNIVERSIDAD\ULACIT\02 DISEÑO APLICACIONES\CLASES\CLASE12 - Inversion Dep\MiBanco\MiBanco\bin\Release\MiBanco.exe.config
+C:\BACKUP\02 Personal\UNIVERSIDAD\ULACIT\02 DISEÑO APLICACIONES\CLASES\CLASE12 - Inversion Dep\MiBanco\MiBanco\bin\Release\MiBanco.exe
+C:\BACKUP\02 Personal\UNIVERSIDAD\ULACIT\02 DISEÑO APLICACIONES\CLASES\CLASE12 - Inversion Dep\MiBanco\MiBanco\bin\Release\MiBanco.pdb
+C:\BACKUP\02 Personal\UNIVERSIDAD\ULACIT\02 DISEÑO APLICACIONES\CLASES\CLASE12 - Inversion Dep\MiBanco\MiBanco\obj\Release\MiBanco.csprojResolveAssemblyReference.cache
+C:\BACKUP\02 Personal\UNIVERSIDAD\ULACIT\02 DISEÑO APLICACIONES\CLASES\CLASE12 - Inversion Dep\MiBanco\MiBanco\obj\Release\MiBanco.frm_MClientes.resources
+C:\BACKUP\02 Personal\UNIVERSIDAD\ULACIT\02 DISEÑO APLICACIONES\CLASES\CLASE12 - Inversion Dep\MiBanco\MiBanco\obj\Release\MiBanco.Frm_Login.resources
+C:\BACKUP\02 Personal\UNIVERSIDAD\ULACIT\02 DISEÑO APLICACIONES\CLASES\CLASE12 - Inversion Dep\MiBanco\MiBanco\obj\Release\MiBanco.Frm_Principal.resources
+C:\BACKUP\02 Personal\UNIVERSIDAD\ULACIT\02 DISEÑO APLICACIONES\CLASES\CLASE12 - Inversion Dep\MiBanco\MiBanco\obj\Release\MiBanco.Properties.Resources.resources
+C:\BACKUP\02 Personal\UNIVERSIDAD\ULACIT\02 DISEÑO APLICACIONES\CLASES\CLASE12 - Inversion Dep\MiBanco\MiBanco\obj\Release\MiBanco.csproj.GenerateResource.Cache
+C:\BACKUP\02 Personal\UNIVERSIDAD\ULACIT\02 DISEÑO APLICACIONES\CLASES\CLASE12 - Inversion Dep\MiBanco\MiBanco\obj\Release\MiBanco.exe
+C:\BACKUP\02 Personal\UNIVERSIDAD\ULACIT\02 DISEÑO APLICACIONES\CLASES\CLASE12 - Inversion Dep\MiBanco\MiBanco\obj\Release\MiBanco.pdb
