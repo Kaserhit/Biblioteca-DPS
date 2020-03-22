@@ -77,3 +77,19 @@ C:\Users\Extreme PC\Desktop\Nueva carpeta\MiBanco\MiBanco\bin\Debug\MiBanco.pdb
 C:\Users\Extreme PC\Desktop\Nueva carpeta\MiBanco\MiBanco\obj\Debug\MiBanco.exe
 C:\Users\Extreme PC\Desktop\Nueva carpeta\MiBanco\MiBanco\obj\Debug\MiBanco.pdb
 C:\Users\Extreme PC\Desktop\Nueva carpeta\MiBanco\MiBanco\obj\Debug\MiBanco.Frm_ConsultarLibro.resources
+C:\Users\juego\Documents\GitHub\Biblioteca\MiBanco\MiBanco\bin\Debug\MiBanco.exe.config
+C:\Users\juego\Documents\GitHub\Biblioteca\MiBanco\MiBanco\bin\Debug\MiBanco.exe
+C:\Users\juego\Documents\GitHub\Biblioteca\MiBanco\MiBanco\bin\Debug\MiBanco.pdb
+C:\Users\juego\Documents\GitHub\Biblioteca\MiBanco\MiBanco\obj\Debug\MiBanco.csprojAssemblyReference.cache
+C:\Users\juego\Documents\GitHub\Biblioteca\MiBanco\MiBanco\obj\Debug\MiBanco.Form1.resources
+C:\Users\juego\Documents\GitHub\Biblioteca\MiBanco\MiBanco\obj\Debug\MiBanco.Frm_IngresarLibro.resources
+C:\Users\juego\Documents\GitHub\Biblioteca\MiBanco\MiBanco\obj\Debug\MiBanco.frm_MClientes.resources
+C:\Users\juego\Documents\GitHub\Biblioteca\MiBanco\MiBanco\obj\Debug\MiBanco.Frm_Login.resources
+C:\Users\juego\Documents\GitHub\Biblioteca\MiBanco\MiBanco\obj\Debug\MiBanco.Frm_Principal.resources
+C:\Users\juego\Documents\GitHub\Biblioteca\MiBanco\MiBanco\obj\Debug\MiBanco.Frm_ConsultarLibro.resources
+C:\Users\juego\Documents\GitHub\Biblioteca\MiBanco\MiBanco\obj\Debug\MiBanco.Frm_Retirar.resources
+C:\Users\juego\Documents\GitHub\Biblioteca\MiBanco\MiBanco\obj\Debug\MiBanco.Properties.Resources.resources
+C:\Users\juego\Documents\GitHub\Biblioteca\MiBanco\MiBanco\obj\Debug\MiBanco.csproj.GenerateResource.cache
+C:\Users\juego\Documents\GitHub\Biblioteca\MiBanco\MiBanco\obj\Debug\MiBanco.csproj.CoreCompileInputs.cache
+C:\Users\juego\Documents\GitHub\Biblioteca\MiBanco\MiBanco\obj\Debug\MiBanco.exe
+C:\Users\juego\Documents\GitHub\Biblioteca\MiBanco\MiBanco\obj\Debug\MiBanco.pdb

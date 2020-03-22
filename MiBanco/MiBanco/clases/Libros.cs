@@ -8,23 +8,32 @@ namespace MiBanco.clases
 {
     class Libros
     {
+        private int Isbn;
         private String Nombre;
         private String Autor;
         private String Editorial;
+        private int Unidades;
         private int Edicion;
         private String Escuela;
         private String Tematica;
         private String Asignatura;
 
-        public Libros(string nombre, string autor, string editorial, int edicion, string escuela, string tematica, string asignatura)
+        public Libros(int isbn, string nombre, string autor, string editorial, int unidades, int edicion, string escuela, string tematica, string asignatura)
         {
+            Isbn = isbn;
             Nombre = nombre;
             Autor = autor;
             Editorial = editorial;
+            Unidades = unidades;
             Edicion = edicion;
             Escuela = escuela;
             Tematica = tematica;
             Asignatura = asignatura;
+        }
+
+        public int getIsbn()
+        {
+            return Isbn;
         }
 
         public String getNombre()
@@ -40,6 +49,11 @@ namespace MiBanco.clases
         public String getEditorial()
         {
             return Editorial;
+        }
+
+        public int getUnidades()
+        {
+            return Unidades;
         }
 
         public int getEdicion()

@@ -190,7 +190,7 @@ namespace MiBanco.clases
 
         }
 
-        public static void IngresaLibro(string nombre, string autor, string editorial, int edicion, string escuela, string tematica, string asignatura)
+        public static void IngresaLibro(int isbn, string nombre, string autor, string editorial, int unidades, int edicion, string escuela, string tematica, string asignatura)
         {
             /*string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;*/
 
@@ -198,13 +198,15 @@ namespace MiBanco.clases
             conx = RetornaAcceso();
 
 
-            using (SqlCommand cmd = new SqlCommand("INSERT INTO CAT_LIBROS (nombre, autor, editorial, edicion, escuela, tematica, asignatura) " +
-                " VALUES (@nombre, @autor, @editorial, @edicion,  @escuela , @tematica , @asignatura )"))
+            using (SqlCommand cmd = new SqlCommand("INSERT INTO CAT_LIBROS (isbn, nombre, autor, editorial, unidades, edicion, escuela, tematica, asignatura) " +
+                " VALUES (@isbn, @nombre, @autor, @editorial, @unidades, @edicion,  @escuela , @tematica , @asignatura )"))
 
             {
+                cmd.Parameters.AddWithValue("@isbn", isbn);
                 cmd.Parameters.AddWithValue("@nombre", nombre);
                 cmd.Parameters.AddWithValue("@autor", autor);
                 cmd.Parameters.AddWithValue("@editorial", editorial);
+                cmd.Parameters.AddWithValue("@unidades", unidades);
                 cmd.Parameters.AddWithValue("@edicion", edicion);
                 cmd.Parameters.AddWithValue("@escuela", escuela);
                 cmd.Parameters.AddWithValue("@tematica", tematica);
@@ -227,7 +229,7 @@ namespace MiBanco.clases
         public static SqlConnection RetornaAcceso() {
 
             SqlConnection conecta = new SqlConnection();
-            conecta.ConnectionString = "Data Source = DESKTOP-5OB2EK1; Initial Catalog = 'LATVIABANK'; Trusted_Connection = True; ";
+            conecta.ConnectionString = "Data Source = DESKTOP-0V51JUM\\MSSQLSERVER01; Initial Catalog = 'LATVIABANK'; Trusted_Connection = True; ";
 
             return conecta;
         }

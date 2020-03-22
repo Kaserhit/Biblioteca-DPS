@@ -60,7 +60,7 @@ namespace MiBanco
             dataGridView1.Refresh();
 
             DataSet ds = new DataSet();
-            ds = DevCom.GetDataLibros(text);
+            ds = DevCom.GetDataLibros(textBox1.Text);
 
             dataGridView1.DataSource = ds.Tables[0];
 
