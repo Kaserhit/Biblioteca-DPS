@@ -273,11 +273,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::MiBanco.Properties.Resources.Sin_título_4;
-            this.pictureBox1.Location = new System.Drawing.Point(103, 507);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(94, 513);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(149, 147);
-            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.Size = new System.Drawing.Size(151, 141);
+            this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;
             // 
             // label11
@@ -304,10 +304,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1132, 762);
+            this.ClientSize = new System.Drawing.Size(1132, 779);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txt_Isbn);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txt_Unidades);
@@ -331,7 +331,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MinimumSize = new System.Drawing.Size(1154, 0);
+            this.MinimumSize = new System.Drawing.Size(1154, 56);
             this.Name = "Frm_IngresarLibro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Biblioteca Ulacit";
