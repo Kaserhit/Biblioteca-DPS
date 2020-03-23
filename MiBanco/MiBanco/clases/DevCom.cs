@@ -164,8 +164,7 @@ namespace MiBanco.clases
 
         }
 
-
-
+        
 
 
         public void ActualizarCuenta(String ID, String Nombre_Cliente, String SALDO_ACTUAL) {
@@ -229,7 +228,7 @@ namespace MiBanco.clases
         public static SqlConnection RetornaAcceso() {
 
             SqlConnection conecta = new SqlConnection();
-            conecta.ConnectionString = "Data Source = DESKTOP-0V51JUM\\MSSQLSERVER01; Initial Catalog = 'LATVIABANK'; Trusted_Connection = True; ";
+            conecta.ConnectionString = "Data Source = DESKTOP-5OB2EK1; Initial Catalog = 'LATVIABANK'; Trusted_Connection = True; ";
 
             return conecta;
         }

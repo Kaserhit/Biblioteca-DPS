@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ConsultarLibro));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_salir = new System.Windows.Forms.Button();
@@ -35,8 +36,11 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Busqueda = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -53,21 +57,22 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("HelvLight", 18F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(533, 44);
+            this.label6.Location = new System.Drawing.Point(477, 48);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(209, 36);
+            this.label6.Size = new System.Drawing.Size(267, 43);
             this.label6.TabIndex = 7;
             this.label6.Text = "Consulta Libro";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // btn_salir
             // 
-            this.btn_salir.Location = new System.Drawing.Point(1095, 429);
+            this.btn_salir.Font = new System.Drawing.Font("HelvLight", 12F);
+            this.btn_salir.Location = new System.Drawing.Point(1095, 427);
             this.btn_salir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(112, 35);
+            this.btn_salir.Size = new System.Drawing.Size(121, 46);
             this.btn_salir.TabIndex = 14;
             this.btn_salir.Text = "&Salir";
             this.btn_salir.UseVisualStyleBackColor = true;
@@ -75,10 +80,11 @@
             // 
             // btn_Ejecutar
             // 
+            this.btn_Ejecutar.Font = new System.Drawing.Font("HelvLight", 12F);
             this.btn_Ejecutar.Location = new System.Drawing.Point(1095, 331);
             this.btn_Ejecutar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Ejecutar.Name = "btn_Ejecutar";
-            this.btn_Ejecutar.Size = new System.Drawing.Size(112, 35);
+            this.btn_Ejecutar.Size = new System.Drawing.Size(121, 50);
             this.btn_Ejecutar.TabIndex = 13;
             this.btn_Ejecutar.Text = "Mostrar";
             this.btn_Ejecutar.UseVisualStyleBackColor = true;
@@ -86,12 +92,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(40, 243);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1010, 290);
+            this.dataGridView1.Size = new System.Drawing.Size(989, 476);
             this.dataGridView1.TabIndex = 15;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -99,39 +106,67 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(251, 174);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(523, 26);
+            this.textBox1.Size = new System.Drawing.Size(778, 26);
             this.textBox1.TabIndex = 16;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Busqueda
             // 
-            this.Busqueda.Location = new System.Drawing.Point(67, 170);
+            this.Busqueda.Font = new System.Drawing.Font("HelvLight", 12F);
+            this.Busqueda.Location = new System.Drawing.Point(40, 159);
             this.Busqueda.Name = "Busqueda";
-            this.Busqueda.Size = new System.Drawing.Size(158, 35);
+            this.Busqueda.Size = new System.Drawing.Size(185, 46);
             this.Busqueda.TabIndex = 17;
             this.Busqueda.Text = "Busqueda:";
             this.Busqueda.UseVisualStyleBackColor = true;
             this.Busqueda.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("HelvLight", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(1079, 680);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(201, 28);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "Biblioteca Ulacit";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MiBanco.Properties.Resources.Sin_título_4;
+            this.pictureBox1.Location = new System.Drawing.Point(1075, 531);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(151, 146);
+            this.pictureBox1.TabIndex = 33;
+            this.pictureBox1.TabStop = false;
+            // 
             // Frm_ConsultarLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1248, 684);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(1316, 944);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Busqueda);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.btn_Ejecutar);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Frm_ConsultarLibro";
-            this.ShowIcon = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Reportar";
             this.Load += new System.EventHandler(this.Frm_Reportar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,5 +181,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button Busqueda;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

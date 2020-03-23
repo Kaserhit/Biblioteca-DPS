@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_IngresarLibro));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_salir = new System.Windows.Forms.Button();
@@ -50,7 +51,11 @@
             this.txt_Unidades = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_Isbn = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,21 +71,22 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("HelvLight", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(303, 43);
+            this.label6.Location = new System.Drawing.Point(435, 32);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(200, 36);
+            this.label6.Size = new System.Drawing.Size(259, 43);
             this.label6.TabIndex = 7;
             this.label6.Text = "Ingresar Libro";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // btn_salir
             // 
-            this.btn_salir.Location = new System.Drawing.Point(616, 410);
+            this.btn_salir.Font = new System.Drawing.Font("HelvLight", 12F);
+            this.btn_salir.Location = new System.Drawing.Point(642, 643);
             this.btn_salir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(112, 35);
+            this.btn_salir.Size = new System.Drawing.Size(151, 57);
             this.btn_salir.TabIndex = 13;
             this.btn_salir.Text = "&Salir";
             this.btn_salir.UseVisualStyleBackColor = true;
@@ -88,19 +94,20 @@
             // 
             // btn_Ejecutar
             // 
-            this.btn_Ejecutar.Location = new System.Drawing.Point(616, 314);
+            this.btn_Ejecutar.Font = new System.Drawing.Font("HelvLight", 12F);
+            this.btn_Ejecutar.Location = new System.Drawing.Point(394, 643);
             this.btn_Ejecutar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Ejecutar.Name = "btn_Ejecutar";
-            this.btn_Ejecutar.Size = new System.Drawing.Size(112, 35);
+            this.btn_Ejecutar.Size = new System.Drawing.Size(151, 57);
             this.btn_Ejecutar.TabIndex = 12;
-            this.btn_Ejecutar.Text = "Guardar";
+            this.btn_Ejecutar.Text = "Confirmar";
             this.btn_Ejecutar.UseVisualStyleBackColor = true;
             this.btn_Ejecutar.Click += new System.EventHandler(this.btn_Ejecutar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(67, 200);
+            this.label1.Location = new System.Drawing.Point(561, 157);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 20);
             this.label1.TabIndex = 14;
@@ -108,7 +115,7 @@
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(251, 197);
+            this.txt_nombre.Location = new System.Drawing.Point(742, 157);
             this.txt_nombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(324, 26);
@@ -117,7 +124,7 @@
             // 
             // txt_autor
             // 
-            this.txt_autor.Location = new System.Drawing.Point(251, 260);
+            this.txt_autor.Location = new System.Drawing.Point(742, 241);
             this.txt_autor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_autor.Name = "txt_autor";
             this.txt_autor.Size = new System.Drawing.Size(324, 26);
@@ -127,7 +134,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(92, 260);
+            this.label2.Location = new System.Drawing.Point(596, 247);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 20);
             this.label2.TabIndex = 16;
@@ -135,7 +142,7 @@
             // 
             // txt_Edicion
             // 
-            this.txt_Edicion.Location = new System.Drawing.Point(251, 378);
+            this.txt_Edicion.Location = new System.Drawing.Point(742, 315);
             this.txt_Edicion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_Edicion.Name = "txt_Edicion";
             this.txt_Edicion.Size = new System.Drawing.Size(324, 26);
@@ -145,15 +152,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(92, 378);
+            this.label3.Location = new System.Drawing.Point(596, 315);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 20);
             this.label3.TabIndex = 20;
             this.label3.Text = "Edicion:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txt_Editorial
             // 
-            this.txt_Editorial.Location = new System.Drawing.Point(251, 314);
+            this.txt_Editorial.Location = new System.Drawing.Point(195, 314);
             this.txt_Editorial.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_Editorial.Name = "txt_Editorial";
             this.txt_Editorial.Size = new System.Drawing.Size(324, 26);
@@ -163,7 +171,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(87, 321);
+            this.label4.Location = new System.Drawing.Point(31, 321);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 20);
             this.label4.TabIndex = 18;
@@ -172,7 +180,7 @@
             // 
             // txt_tematica
             // 
-            this.txt_tematica.Location = new System.Drawing.Point(251, 547);
+            this.txt_tematica.Location = new System.Drawing.Point(742, 405);
             this.txt_tematica.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_tematica.Name = "txt_tematica";
             this.txt_tematica.Size = new System.Drawing.Size(324, 26);
@@ -182,7 +190,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(87, 550);
+            this.label5.Location = new System.Drawing.Point(596, 408);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 20);
             this.label5.TabIndex = 24;
@@ -190,7 +198,7 @@
             // 
             // txt_escuela
             // 
-            this.txt_escuela.Location = new System.Drawing.Point(251, 483);
+            this.txt_escuela.Location = new System.Drawing.Point(195, 405);
             this.txt_escuela.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_escuela.Name = "txt_escuela";
             this.txt_escuela.Size = new System.Drawing.Size(324, 26);
@@ -200,7 +208,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(92, 486);
+            this.label7.Location = new System.Drawing.Point(36, 408);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 20);
             this.label7.TabIndex = 22;
@@ -208,7 +216,7 @@
             // 
             // txt_asignatura
             // 
-            this.txt_asignatura.Location = new System.Drawing.Point(251, 605);
+            this.txt_asignatura.Location = new System.Drawing.Point(429, 565);
             this.txt_asignatura.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_asignatura.Name = "txt_asignatura";
             this.txt_asignatura.Size = new System.Drawing.Size(324, 26);
@@ -218,7 +226,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(83, 608);
+            this.label8.Location = new System.Drawing.Point(546, 516);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(90, 20);
             this.label8.TabIndex = 26;
@@ -228,7 +236,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(92, 434);
+            this.label9.Location = new System.Drawing.Point(36, 241);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(81, 20);
             this.label9.TabIndex = 28;
@@ -237,7 +245,7 @@
             // 
             // txt_Unidades
             // 
-            this.txt_Unidades.Location = new System.Drawing.Point(251, 434);
+            this.txt_Unidades.Location = new System.Drawing.Point(195, 241);
             this.txt_Unidades.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_Unidades.Name = "txt_Unidades";
             this.txt_Unidades.Size = new System.Drawing.Size(324, 26);
@@ -247,7 +255,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(92, 147);
+            this.label10.Location = new System.Drawing.Point(44, 160);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(44, 20);
             this.label10.TabIndex = 30;
@@ -256,18 +264,50 @@
             // 
             // txt_Isbn
             // 
-            this.txt_Isbn.Location = new System.Drawing.Point(251, 144);
+            this.txt_Isbn.Location = new System.Drawing.Point(195, 160);
             this.txt_Isbn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_Isbn.Name = "txt_Isbn";
             this.txt_Isbn.Size = new System.Drawing.Size(324, 26);
             this.txt_Isbn.TabIndex = 31;
             this.txt_Isbn.TextChanged += new System.EventHandler(this.txt_Isbn_TextChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MiBanco.Properties.Resources.Sin_título_4;
+            this.pictureBox1.Location = new System.Drawing.Point(103, 507);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(149, 147);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("HelvLight", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(89, 657);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(201, 28);
+            this.label11.TabIndex = 32;
+            this.label11.Text = "Biblioteca Ulacit";
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(866, 657);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(307, 188);
+            this.panel3.TabIndex = 34;
+            // 
             // Frm_IngresarLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 681);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(1132, 762);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txt_Isbn);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txt_Unidades);
@@ -289,14 +329,16 @@
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.btn_Ejecutar);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MinimumSize = new System.Drawing.Size(1154, 0);
             this.Name = "Frm_IngresarLibro";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Depositar";
+            this.Text = "Biblioteca Ulacit";
             this.Load += new System.EventHandler(this.Frm_IngresarLibro_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,5 +368,8 @@
         private System.Windows.Forms.TextBox txt_Unidades;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_Isbn;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel3;
     }
 }
