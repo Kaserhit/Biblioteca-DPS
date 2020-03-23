@@ -60,11 +60,11 @@ namespace MiBanco
         private void btn_Ejecutar_Click(object sender, EventArgs e)
         {
 
-          clases.Libros NL = new clases.Libros(Isbn,Nombre,Autor,Editorial,Edicion,Unidades,Escuela,Tematica,Asignatura);
+          clases.Libros NL = new clases.Libros(Isbn,Nombre,Autor,Editorial,Unidades,Edicion,Escuela,Tematica,Asignatura);
 
           clases.DevCom x = new clases.DevCom();
 
-          clases.DevCom.IngresaLibro(Isbn, Nombre, Autor, Editorial, Edicion, Unidades, Escuela, Tematica, Asignatura);
+          clases.DevCom.IngresaLibro(Isbn, Nombre, Autor, Editorial, Unidades, Edicion, Escuela, Tematica, Asignatura);
 
             MessageBox.Show("Libro ingresado al sistema con exito");
 

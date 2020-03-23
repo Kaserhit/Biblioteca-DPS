@@ -68,11 +68,11 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("HelvLight", 18F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(477, 48);
+            this.label6.Location = new System.Drawing.Point(548, 36);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(267, 43);
+            this.label6.Size = new System.Drawing.Size(188, 43);
             this.label6.TabIndex = 7;
-            this.label6.Text = "Consulta Libro";
+            this.label6.Text = "Consultas";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // btn_salir
