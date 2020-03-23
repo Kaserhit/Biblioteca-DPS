@@ -12,13 +12,16 @@ namespace MiBanco
 {
     public partial class Frm_IngresarLibro : Form
     {
+         int Isbn;
          String Nombre;
          String Autor;
          String Editorial;
+         int Unidades;
          int Edicion;
          String Escuela;
          String Tematica;
          String Asignatura;
+
 
 
 
@@ -49,14 +52,19 @@ namespace MiBanco
 
         }
 
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btn_Ejecutar_Click(object sender, EventArgs e)
         {
 
-          clases.Libros NL = new clases.Libros(Nombre,Autor,Editorial,Edicion,Escuela,Tematica,Asignatura);
+          clases.Libros NL = new clases.Libros(Isbn,Nombre,Autor,Editorial,Edicion,Unidades,Escuela,Tematica,Asignatura);
 
           clases.DevCom x = new clases.DevCom();
 
-          clases.DevCom.IngresaLibro(Nombre, Autor, Editorial, Edicion, Escuela, Tematica, Asignatura);
+          clases.DevCom.IngresaLibro(Isbn, Nombre, Autor, Editorial, Edicion, Unidades, Escuela, Tematica, Asignatura);
 
             MessageBox.Show("Libro ingresado al sistema con exito");
 
@@ -109,6 +117,21 @@ namespace MiBanco
         {
           
             Asignatura = Convert.ToString(txt_asignatura.Text);
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Isbn_TextChanged(object sender, EventArgs e)
+        {
+            Isbn = Convert.ToInt32(txt_Isbn.Text);
+        }
+
+        private void txt_Unidades_TextChanged(object sender, EventArgs e)
+        {
+            Unidades = Convert.ToInt32(txt_Unidades.Text);
         }
     }
 }

@@ -46,6 +46,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txt_asignatura = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_Unidades = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txt_Isbn = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,7 +100,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(70, 184);
+            this.label1.Location = new System.Drawing.Point(67, 200);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 20);
             this.label1.TabIndex = 14;
@@ -104,7 +108,7 @@
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(251, 181);
+            this.txt_nombre.Location = new System.Drawing.Point(251, 197);
             this.txt_nombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(324, 26);
@@ -113,7 +117,7 @@
             // 
             // txt_autor
             // 
-            this.txt_autor.Location = new System.Drawing.Point(251, 245);
+            this.txt_autor.Location = new System.Drawing.Point(251, 260);
             this.txt_autor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_autor.Name = "txt_autor";
             this.txt_autor.Size = new System.Drawing.Size(324, 26);
@@ -123,7 +127,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(95, 245);
+            this.label2.Location = new System.Drawing.Point(92, 260);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 20);
             this.label2.TabIndex = 16;
@@ -168,7 +172,7 @@
             // 
             // txt_tematica
             // 
-            this.txt_tematica.Location = new System.Drawing.Point(251, 507);
+            this.txt_tematica.Location = new System.Drawing.Point(251, 547);
             this.txt_tematica.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_tematica.Name = "txt_tematica";
             this.txt_tematica.Size = new System.Drawing.Size(324, 26);
@@ -178,7 +182,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(87, 510);
+            this.label5.Location = new System.Drawing.Point(87, 550);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 20);
             this.label5.TabIndex = 24;
@@ -186,7 +190,7 @@
             // 
             // txt_escuela
             // 
-            this.txt_escuela.Location = new System.Drawing.Point(251, 443);
+            this.txt_escuela.Location = new System.Drawing.Point(251, 483);
             this.txt_escuela.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_escuela.Name = "txt_escuela";
             this.txt_escuela.Size = new System.Drawing.Size(324, 26);
@@ -196,7 +200,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(92, 446);
+            this.label7.Location = new System.Drawing.Point(92, 486);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 20);
             this.label7.TabIndex = 22;
@@ -204,7 +208,7 @@
             // 
             // txt_asignatura
             // 
-            this.txt_asignatura.Location = new System.Drawing.Point(251, 565);
+            this.txt_asignatura.Location = new System.Drawing.Point(251, 605);
             this.txt_asignatura.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_asignatura.Name = "txt_asignatura";
             this.txt_asignatura.Size = new System.Drawing.Size(324, 26);
@@ -214,18 +218,60 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(83, 568);
+            this.label8.Location = new System.Drawing.Point(83, 608);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(90, 20);
             this.label8.TabIndex = 26;
             this.label8.Text = "Asignatura:";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(92, 434);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(81, 20);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "Unidades:";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // txt_Unidades
+            // 
+            this.txt_Unidades.Location = new System.Drawing.Point(251, 434);
+            this.txt_Unidades.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_Unidades.Name = "txt_Unidades";
+            this.txt_Unidades.Size = new System.Drawing.Size(324, 26);
+            this.txt_Unidades.TabIndex = 29;
+            this.txt_Unidades.TextChanged += new System.EventHandler(this.txt_Unidades_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(92, 147);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(44, 20);
+            this.label10.TabIndex = 30;
+            this.label10.Text = "Isbn:";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // txt_Isbn
+            // 
+            this.txt_Isbn.Location = new System.Drawing.Point(251, 144);
+            this.txt_Isbn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_Isbn.Name = "txt_Isbn";
+            this.txt_Isbn.Size = new System.Drawing.Size(324, 26);
+            this.txt_Isbn.TabIndex = 31;
+            this.txt_Isbn.TextChanged += new System.EventHandler(this.txt_Isbn_TextChanged);
+            // 
             // Frm_IngresarLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 614);
+            this.ClientSize = new System.Drawing.Size(741, 681);
+            this.Controls.Add(this.txt_Isbn);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txt_Unidades);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.txt_asignatura);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txt_tematica);
@@ -276,5 +322,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_asignatura;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txt_Unidades;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txt_Isbn;
     }
 }
