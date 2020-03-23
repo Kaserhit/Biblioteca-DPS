@@ -27,28 +27,67 @@ namespace MiBanco.clases
             return ds;
         }
 
+        public static DataSet GetData(string text)
+        {
+            SqlConnection conx = new SqlConnection();
+            conx = RetornaAcceso();
+
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM CAT_USERS " + "where USERNAME = '" + text + "'", conx);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            return ds;
+        }
+
         public  DataSet GetCuenta(String XData)
         {
             SqlConnection conx = new SqlConnection();
             conx = RetornaAcceso();
 
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM CAT_CUENTAS WHERE ID='" + XData +  "'", conx);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM CAT_CUENTAS WHERE ID='" + XData + "'", conx);
             DataSet ds = new DataSet();
             da.Fill(ds);
             return ds;
         }
+
 
         public static DataSet GetDataMovtos()
         {
             SqlConnection conx = new SqlConnection();
             conx = RetornaAcceso();
 
-           
+
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM CAT_CUENTAS", conx);
             DataSet ds = new DataSet();
             da.Fill(ds);
             return ds;
         }
+
+
+
+
+
+        public static DataSet GetMantenimiento()
+        {
+            SqlConnection conx = new SqlConnection();
+            conx = RetornaAcceso();
+
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM CAT_LIBROS_DAÑADOS", conx);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            return ds;
+        }
+
+        public static DataSet GetMantenimiento(string text)
+        {
+            SqlConnection conx = new SqlConnection();
+            conx = RetornaAcceso();
+
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM CAT_LIBROS_DAÑADOS " + "where nombre = '" + text + "'", conx);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            return ds;
+        }
+
 
 
         public static DataSet GetDataLibros()

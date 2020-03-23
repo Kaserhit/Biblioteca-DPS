@@ -170,6 +170,7 @@
             this.Name = "Frm_Login";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Biblioteca Ulacit";
             this.Load += new System.EventHandler(this.Frm_Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

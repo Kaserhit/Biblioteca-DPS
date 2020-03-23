@@ -37,35 +37,54 @@ namespace MiBanco
 
         private void btn_Ejecutar_Click(object sender, EventArgs e)
         {
+            if (comboBox1.SelectedItem.ToString() == "Usuarios")
+            {
+                DevCom x = new DevCom();
 
-            DevCom x = new DevCom();
+                dataGridView1.DataSource = null;
+                dataGridView1.Refresh();
 
-            dataGridView1.DataSource = null;
-            dataGridView1.Refresh();
+                DataSet ds = new DataSet();
+                ds = DevCom.GetData(textBox1.Text);
 
-            DataSet ds = new DataSet();
-            ds= DevCom.GetDataLibros();
+                dataGridView1.DataSource = ds.Tables[0];
 
-            dataGridView1.DataSource = ds.Tables[0];
+            }
 
+            if (comboBox1.SelectedItem.ToString() == "Libros")
+            {
+                DevCom x = new DevCom();
+
+                dataGridView1.DataSource = null;
+                dataGridView1.Refresh();
+
+                DataSet ds = new DataSet();
+                ds = DevCom.GetDataLibros(textBox1.Text);
+
+                dataGridView1.DataSource = ds.Tables[0];
+            }
+
+
+            if (comboBox1.SelectedItem.ToString() == "Mantenimiento")
+            {
+                DevCom x = new DevCom();
+
+                dataGridView1.DataSource = null;
+                dataGridView1.Refresh();
+
+                DataSet ds = new DataSet();
+                ds = DevCom.GetMantenimiento(textBox1.Text);
+
+                dataGridView1.DataSource = ds.Tables[0];
+            }
 
         }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DevCom x = new DevCom();
-
-            dataGridView1.DataSource = null;
-            dataGridView1.Refresh();
-
-            DataSet ds = new DataSet();
-            ds = DevCom.GetDataLibros(textBox1.Text);
-
-            dataGridView1.DataSource = ds.Tables[0];
-
+  
         }
-
 
 
 
@@ -76,7 +95,7 @@ namespace MiBanco
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            text = Convert.ToString(Busqueda);
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -84,6 +103,102 @@ namespace MiBanco
 
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+
+
+            if (comboBox1.SelectedItem.ToString() == "Usuarios" )
+            {
+                clases.DevCom x = new clases.DevCom();
+
+                dataGridView1.DataSource = null;
+                dataGridView1.Refresh();
+
+                DataSet ds = new DataSet();
+                ds = clases.DevCom.GetData();
+
+                dataGridView1.DataSource = ds.Tables[0];
+
+                button1.Show();
+                button2.Show();
+                button3.Show();
+                button4.Hide();
+                button5.Hide();
+                button6.Hide();
+            }
+
+            if (comboBox1.SelectedItem.ToString() == "Libros")
+            {
+                DevCom x = new DevCom();
+
+                dataGridView1.DataSource = null;
+                dataGridView1.Refresh();
+
+                DataSet ds = new DataSet();
+                ds = DevCom.GetDataLibros();
+
+                dataGridView1.DataSource = ds.Tables[0];
+
+                button1.Hide();
+                button2.Hide();
+                button3.Hide();
+                button4.Show();
+                button5.Show();
+                button6.Hide();
+            }
+
+            if (comboBox1.SelectedItem.ToString() == "Mantenimiento")
+            {
+                DevCom x = new DevCom();
+
+                dataGridView1.DataSource = null;
+                dataGridView1.Refresh();
+
+                DataSet ds = new DataSet();
+                ds = DevCom.GetMantenimiento();
+
+                dataGridView1.DataSource = ds.Tables[0];
+
+                button1.Hide();
+                button2.Hide();
+                button3.Hide();
+                button4.Hide();
+                button5.Show();
+                button6.Show();
+            }
+
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
