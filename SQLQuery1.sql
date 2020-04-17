@@ -1,0 +1,11 @@
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT TOP (1000) [isbn]
+      ,[nombre]
+      ,[autor]
+      ,[editorial]
+      ,[unidades]
+      ,[edicion]
+      ,[escuela]
+      ,[tematica]
+      ,[asignatura]
+  FROM [LATVIABANK].[dbo].[CAT_LIBROS]

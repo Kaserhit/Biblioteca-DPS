@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="LibrosDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CAT_CUENTAS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="NOMBRE_CLIENTE" Type="nvarchar" MaxLength="50" />
+          <Property Name="SALDO_ACTUAL" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="CAT_LIBROS">
+          <Key>
+            <PropertyRef Name="isbn" />
+          </Key>
+          <Property Name="isbn" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="autor" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="editorial" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="unidades" Type="int" Nullable="false" />
+          <Property Name="edicion" Type="int" Nullable="false" />
+          <Property Name="escuela" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="tematica" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="asignatura" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CAT_LIBROS_DAÑADOS">
+          <Key>
+            <PropertyRef Name="isbn" />
+          </Key>
+          <Property Name="isbn" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="autor" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="editorial" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="unidades" Type="int" Nullable="false" />
+          <Property Name="edicion" Type="int" Nullable="false" />
+          <Property Name="escuela" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="tematica" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="costo_reparacion" Type="int" Nullable="false" />
+          <Property Name="asignatura" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CAT_USERS">
+          <Key>
+            <PropertyRef Name="ID_USER" />
+          </Key>
+          <Property Name="ID_USER" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="USERNAME" Type="nvarchar" MaxLength="20" />
+          <Property Name="PASSWORD" Type="nvarchar" MaxLength="20" />
+          <Property Name="STATUS" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="TRA_CUENTAS">
+          <Key>
+            <PropertyRef Name="ID_CUENTA" />
+            <PropertyRef Name="ID_MOVTO" />
+          </Key>
+          <Property Name="ID_CUENTA" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ID_MOVTO" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="MONTO_MOVTO" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="FECHA" Type="nvarchar" MaxLength="10" />
+          <Property Name="HORA" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="TRA_IMGS">
+          <Key>
+            <PropertyRef Name="ID_DOC" />
+            <PropertyRef Name="ID_FOTO" />
+          </Key>
+          <Property Name="ID_DOC" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ID_FOTO" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="IMAGEN" Type="varbinary(max)" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="LibrosDBModelStoreContainer">
+          <EntitySet Name="CAT_CUENTAS" EntityType="Self.CAT_CUENTAS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CAT_LIBROS" EntityType="Self.CAT_LIBROS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CAT_LIBROS_DAÑADOS" EntityType="Self.CAT_LIBROS_DAÑADOS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CAT_USERS" EntityType="Self.CAT_USERS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRA_CUENTAS" EntityType="Self.TRA_CUENTAS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRA_IMGS" EntityType="Self.TRA_IMGS" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LibrosDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CAT_CUENTAS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NOMBRE_CLIENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SALDO_ACTUAL" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="CAT_LIBROS_DAÑADOS">
+          <Key>
+            <PropertyRef Name="isbn" />
+          </Key>
+          <Property Name="isbn" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="autor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="editorial" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="unidades" Type="Int32" Nullable="false" />
+          <Property Name="edicion" Type="Int32" Nullable="false" />
+          <Property Name="escuela" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tematica" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="costo_reparacion" Type="Int32" Nullable="false" />
+          <Property Name="asignatura" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CAT_USERS">
+          <Key>
+            <PropertyRef Name="ID_USER" />
+          </Key>
+          <Property Name="ID_USER" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="USERNAME" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PASSWORD" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="STATUS" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TRA_CUENTAS">
+          <Key>
+            <PropertyRef Name="ID_CUENTA" />
+            <PropertyRef Name="ID_MOVTO" />
+          </Key>
+          <Property Name="ID_CUENTA" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ID_MOVTO" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MONTO_MOVTO" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FECHA" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="HORA" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TRA_IMGS">
+          <Key>
+            <PropertyRef Name="ID_DOC" />
+            <PropertyRef Name="ID_FOTO" />
+          </Key>
+          <Property Name="ID_DOC" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ID_FOTO" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IMAGEN" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="LibrosContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CAT_CUENTAS" EntityType="Self.CAT_CUENTAS" />
+          <EntitySet Name="CAT_LIBROS_DAÑADOS" EntityType="Self.CAT_LIBROS_DAÑADOS" />
+          <EntitySet Name="CAT_USERS" EntityType="Self.CAT_USERS" />
+          <EntitySet Name="TRA_CUENTAS" EntityType="Self.TRA_CUENTAS" />
+          <EntitySet Name="TRA_IMGS" EntityType="Self.TRA_IMGS" />
+          <EntitySet Name="CAT_LIBROS" EntityType="LibrosDBModel.CAT_LIBROS" />
+        </EntityContainer>
+        <EntityType Name="CAT_LIBROS">
+          <Key>
+            <PropertyRef Name="isbn" />
+          </Key>
+          <Property Name="isbn" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="autor" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="editorial" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="unidades" Type="Int32" Nullable="false" />
+          <Property Name="edicion" Type="Int32" Nullable="false" />
+          <Property Name="escuela" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tematica" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="asignatura" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LibrosDBModelStoreContainer" CdmEntityContainer="LibrosContext">
+          <EntitySetMapping Name="CAT_CUENTAS">
+            <EntityTypeMapping TypeName="LibrosDBModel.CAT_CUENTAS">
+              <MappingFragment StoreEntitySet="CAT_CUENTAS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NOMBRE_CLIENTE" ColumnName="NOMBRE_CLIENTE" />
+                <ScalarProperty Name="SALDO_ACTUAL" ColumnName="SALDO_ACTUAL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CAT_LIBROS_DAÑADOS">
+            <EntityTypeMapping TypeName="LibrosDBModel.CAT_LIBROS_DAÑADOS">
+              <MappingFragment StoreEntitySet="CAT_LIBROS_DAÑADOS">
+                <ScalarProperty Name="isbn" ColumnName="isbn" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="autor" ColumnName="autor" />
+                <ScalarProperty Name="editorial" ColumnName="editorial" />
+                <ScalarProperty Name="unidades" ColumnName="unidades" />
+                <ScalarProperty Name="edicion" ColumnName="edicion" />
+                <ScalarProperty Name="escuela" ColumnName="escuela" />
+                <ScalarProperty Name="tematica" ColumnName="tematica" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="costo_reparacion" ColumnName="costo_reparacion" />
+                <ScalarProperty Name="asignatura" ColumnName="asignatura" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CAT_USERS">
+            <EntityTypeMapping TypeName="LibrosDBModel.CAT_USERS">
+              <MappingFragment StoreEntitySet="CAT_USERS">
+                <ScalarProperty Name="ID_USER" ColumnName="ID_USER" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRA_CUENTAS">
+            <EntityTypeMapping TypeName="LibrosDBModel.TRA_CUENTAS">
+              <MappingFragment StoreEntitySet="TRA_CUENTAS">
+                <ScalarProperty Name="ID_CUENTA" ColumnName="ID_CUENTA" />
+                <ScalarProperty Name="ID_MOVTO" ColumnName="ID_MOVTO" />
+                <ScalarProperty Name="MONTO_MOVTO" ColumnName="MONTO_MOVTO" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="HORA" ColumnName="HORA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRA_IMGS">
+            <EntityTypeMapping TypeName="LibrosDBModel.TRA_IMGS">
+              <MappingFragment StoreEntitySet="TRA_IMGS">
+                <ScalarProperty Name="ID_DOC" ColumnName="ID_DOC" />
+                <ScalarProperty Name="ID_FOTO" ColumnName="ID_FOTO" />
+                <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CAT_LIBROS">
+            <EntityTypeMapping TypeName="LibrosDBModel.CAT_LIBROS">
+              <MappingFragment StoreEntitySet="CAT_LIBROS">
+                <ScalarProperty Name="asignatura" ColumnName="asignatura" />
+                <ScalarProperty Name="tematica" ColumnName="tematica" />
+                <ScalarProperty Name="escuela" ColumnName="escuela" />
+                <ScalarProperty Name="edicion" ColumnName="edicion" />
+                <ScalarProperty Name="unidades" ColumnName="unidades" />
+                <ScalarProperty Name="editorial" ColumnName="editorial" />
+                <ScalarProperty Name="autor" ColumnName="autor" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="isbn" ColumnName="isbn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

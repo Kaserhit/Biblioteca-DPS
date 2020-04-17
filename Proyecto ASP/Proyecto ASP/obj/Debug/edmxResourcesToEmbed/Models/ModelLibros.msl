@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LibrosDBModelStoreContainer" CdmEntityContainer="LibrosContext">
+    <EntitySetMapping Name="CAT_CUENTAS">
+      <EntityTypeMapping TypeName="LibrosDBModel.CAT_CUENTAS">
+        <MappingFragment StoreEntitySet="CAT_CUENTAS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE_CLIENTE" ColumnName="NOMBRE_CLIENTE" />
+          <ScalarProperty Name="SALDO_ACTUAL" ColumnName="SALDO_ACTUAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_LIBROS_DAÑADOS">
+      <EntityTypeMapping TypeName="LibrosDBModel.CAT_LIBROS_DAÑADOS">
+        <MappingFragment StoreEntitySet="CAT_LIBROS_DAÑADOS">
+          <ScalarProperty Name="isbn" ColumnName="isbn" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="autor" ColumnName="autor" />
+          <ScalarProperty Name="editorial" ColumnName="editorial" />
+          <ScalarProperty Name="unidades" ColumnName="unidades" />
+          <ScalarProperty Name="edicion" ColumnName="edicion" />
+          <ScalarProperty Name="escuela" ColumnName="escuela" />
+          <ScalarProperty Name="tematica" ColumnName="tematica" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="costo_reparacion" ColumnName="costo_reparacion" />
+          <ScalarProperty Name="asignatura" ColumnName="asignatura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_USERS">
+      <EntityTypeMapping TypeName="LibrosDBModel.CAT_USERS">
+        <MappingFragment StoreEntitySet="CAT_USERS">
+          <ScalarProperty Name="ID_USER" ColumnName="ID_USER" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRA_CUENTAS">
+      <EntityTypeMapping TypeName="LibrosDBModel.TRA_CUENTAS">
+        <MappingFragment StoreEntitySet="TRA_CUENTAS">
+          <ScalarProperty Name="ID_CUENTA" ColumnName="ID_CUENTA" />
+          <ScalarProperty Name="ID_MOVTO" ColumnName="ID_MOVTO" />
+          <ScalarProperty Name="MONTO_MOVTO" ColumnName="MONTO_MOVTO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="HORA" ColumnName="HORA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRA_IMGS">
+      <EntityTypeMapping TypeName="LibrosDBModel.TRA_IMGS">
+        <MappingFragment StoreEntitySet="TRA_IMGS">
+          <ScalarProperty Name="ID_DOC" ColumnName="ID_DOC" />
+          <ScalarProperty Name="ID_FOTO" ColumnName="ID_FOTO" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_LIBROS">
+      <EntityTypeMapping TypeName="LibrosDBModel.CAT_LIBROS">
+        <MappingFragment StoreEntitySet="CAT_LIBROS">
+          <ScalarProperty Name="asignatura" ColumnName="asignatura" />
+          <ScalarProperty Name="tematica" ColumnName="tematica" />
+          <ScalarProperty Name="escuela" ColumnName="escuela" />
+          <ScalarProperty Name="edicion" ColumnName="edicion" />
+          <ScalarProperty Name="unidades" ColumnName="unidades" />
+          <ScalarProperty Name="editorial" ColumnName="editorial" />
+          <ScalarProperty Name="autor" ColumnName="autor" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="isbn" ColumnName="isbn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
