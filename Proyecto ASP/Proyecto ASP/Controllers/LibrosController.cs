@@ -28,6 +28,28 @@ namespace Proyecto_ASP.Controllers
             }    
         }
 
+        // Busqueda
+
+        public ActionResult Busqueda(string Cadena = "")
+        {
+            try
+            {
+                using (LibrosContext db = new LibrosContext())
+                {
+                    CAT_LIBROS Blibro = db.CAT_LIBROS.Find(Cadena);
+
+                    return View(Blibro);
+               
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
         // Agregar Libros
 
         public ActionResult Agregar()

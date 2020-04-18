@@ -1,11 +1,27 @@
 ﻿@model IEnumerable<Proyecto_ASP.Models.CAT_LIBROS>
 
 @{
-    ViewBag.Title = "Consulta de Libros";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+                /**/
+
+                ViewBag.Title = "Consulta de Libros";
+                Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
 <h2>Consulta de Libros</h2>
+
+@using (Html.BeginForm("Index", "Busqueda", FormMethod.Post))
+{
+<div>
+
+    <button type="submit" class="btn btn-default">Busqueda</button>
+    @Html.TextBox("Cadena", "", new { @Class = "form-control" })
+    <p>
+    <p>
+</div>
+}
+
+
 
 <p>
     @Html.ActionLink("Ingresar Libro", "Agregar")
@@ -42,42 +58,43 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.isbn)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.autor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.editorial)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.unidades)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.edicion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.escuela)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.tematica)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.asignatura)
-        </td>
-        <td>
-            @Html.ActionLink("Editar", "Editar", new { id = item.isbn }, null) |
-            @Html.ActionLink("Detalles", "Detalles", new { id = item.isbn }, null) |
-            @Html.ActionLink("Eliminar", "Eliminar", new { id = item.isbn }, new {@Class = "MEliminar"  } )
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.isbn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.autor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.editorial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.unidades)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.edicion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.escuela)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tematica)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.asignatura)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Editar", new { id = item.isbn }, null) |
+                @Html.ActionLink("Detalles", "Detalles", new { id = item.isbn }, null) |
+                @Html.ActionLink("Eliminar", "Eliminar", new { id = item.isbn }, new { @Class = "MEliminar" })
+            </td>
+        </tr>
+    }
 
 </table>
 

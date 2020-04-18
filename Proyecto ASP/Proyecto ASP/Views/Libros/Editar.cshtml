@@ -67,7 +67,16 @@
         <div class="form-group">
             @Html.LabelFor(model => model.escuela, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.escuela, new { htmlAttributes = new { @class = "form-control" } })
+                <select class="form-control" id="escuela" name="escuela">
+                    <option value="Ingieneria Informatica">Ingieneria Informatica</option>
+                    <option value="Ingieneria Electronica">Ingieneria Electronica</option>
+                    <option value="Odontologia">Odontologia</option>
+                    <option value="Psicologia">Psicologia</option>
+                    <option value="Publicidad">Publicidad</option>
+                    <option value="Ingieneria Quimica">Ingieneria Quimica</option>
+                    <option value="Ingieneria Industrial">Ingieneria Industrial</option>
+                </select>
+             
                 @Html.ValidationMessageFor(model => model.escuela, "", new { @class = "text-danger" })
             </div>
         </div>
