@@ -1,25 +1,22 @@
 ﻿@model IEnumerable<Proyecto_ASP.Models.CAT_LIBROS>
 
 @{
-    /**/
+                /**/
 
-    ViewBag.Title = "Consulta de Libros";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+                ViewBag.Title = "Consulta de Libros";
+                Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 
 <h2>Consulta de Libros</h2>
 
-@using (Html.BeginForm("Index", "Busqueda", FormMethod.Post))
-{
-    <div>
-        <button type="submit" class="btn btn-default">Busqueda</button>
-        @Html.TextBox("cadena", "", new { @Class = "form-control" })
-        <p>
-        <p>
-    </div>
-}
+
+
+
 <p>
-    @Html.ActionLink("Ingresar Libro", "Agregar")
+    @Html.ActionLink("Ingresar Libro  |", "Agregar")
+    @Html.ActionLink("Buscar Libro", "Busqueda", new { id = "Cadena" }) @Html.TextBox("Cadena", "", new {@class="form-control"})
+
 </p>
 <table class="table">
     <tr>
@@ -52,6 +49,7 @@
         </th>
         <th></th>
     </tr>
+
     @foreach (var item in Model)
     {
         <tr>
@@ -89,8 +87,11 @@
             </td>
         </tr>
     }
+
 </table>
+
 @section scripts{
+
     <script>
         $(".MEliminar").click(function (event) {
             if (!confirm('¿Esta seguro de eliminar el libro?')) {
@@ -99,3 +100,4 @@
         });
     </script>
 }
+
