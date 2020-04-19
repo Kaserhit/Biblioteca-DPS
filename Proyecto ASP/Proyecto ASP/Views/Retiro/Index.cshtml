@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Proyecto_ASP.Models.CAT_LIBROS>
+
+@{
+    ViewBag.Title = "Retirar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Libros Disponibles</h2>
+
+@using (Html.BeginForm("Index", "Busqueda", FormMethod.Post))
+{
+    <div>
+        <button type="submit" class="btn btn-default">Busqueda</button>
+        @Html.TextBox("Cadena", "", new { @Class = "form-control" })
+        <p>
+        <p>
+    </div>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.isbn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.autor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.editorial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.unidades)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.edicion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.escuela)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tematica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.asignatura)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.isbn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.autor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.editorial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.unidades)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.edicion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.escuela)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tematica)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.asignatura)
+            </td>
+            <td>
+                @Html.ActionLink("Retirar", "Retirar", new { id = item.isbn }, null)
+            </td>
+        </tr>
+    }
+
+</table>

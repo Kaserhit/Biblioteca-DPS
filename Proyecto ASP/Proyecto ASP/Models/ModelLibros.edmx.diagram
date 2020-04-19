@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="1f682534280e4985853ac851a55a6729" Name="Diagram1">
-        <EntityTypeShape EntityType="LibrosDBModel.CAT_CUENTAS" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LibrosDBModel.CAT_LIBROS_DAÑADOS" Width="1.5" PointX="3.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LibrosDBModel.CAT_USERS" Width="1.5" PointX="2.125" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LibrosDBModel.TRA_CUENTAS" Width="1.5" PointX="2.375" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LibrosDBModel.TRA_IMGS" Width="1.5" PointX="7" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LibrosDBModel.CAT_LIBROS" Width="1.5" PointX="5.375" PointY="3.75" />
+      <Diagram DiagramId="a592a996b5b249829756767176021724" Name="Diagram1">
+        <EntityTypeShape EntityType="LATVIABANKModel.CAT_CUENTAS" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LATVIABANKModel.CAT_LIBROS" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LATVIABANKModel.CAT_LIBROS_DAÑADOS" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LATVIABANKModel.CAT_USERS" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LATVIABANKModel.TRA_CUENTAS" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LATVIABANKModel.TRA_IMGS" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

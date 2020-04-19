@@ -1,17 +1,59 @@
-﻿@{
-    ViewBag.Title = "Contact";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        .nuevoEstilo1 {
+            background-color: #00CCFF;
+        }
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+        .nuevoEstilo2 {
+            font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+            font-size: x-large;
+        }
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+        .nuevoEstilo2 {
+            border: thin solid #800080;
+            background-color: #800080;
+            color: #FFFFFF;
+        }
+
+        .nuevoEstilo3 {
+            font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+            font-size: large;
+            color: #000000;
+            font-variant: normal;
+            font-style: normal;
+            width: 1242px;
+            height: 25px;
+        }
+
+        .nuevoEstilo4 {
+            text-align: center;
+            margin-left: 97px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+<body style="height: 75px">
+    <form id="form1" runat="server">
+        <div class="nuevoEstilo2">
+            Solicitud de Libro
+        </div>
+        <p class="nuevoEstilo3">
+            Seleccione el tipo de retiro:<asp:DropDownList ID="DropDownList1" runat="server" CssClass="nuevoEstilo4" Height="64px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="127px">
+                <asp:ListItem>ISBN</asp:ListItem>
+                <asp:ListItem>Nombre</asp:ListItem>
+            </asp:DropDownList>
+        </p>
+        <p class="nuevoEstilo3">
+            ISBN:<asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged" style="margin-left: 263px"></asp:TextBox>
+        </p>
+        <p class="nuevoEstilo3">
+            Nombre:<asp:TextBox ID="TextBox2" runat="server" style="margin-left: 238px"></asp:TextBox>
+        </p>
+    </form>
+</body>
+</html>

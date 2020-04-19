@@ -179,6 +179,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LibrosController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RetiroController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -300,6 +301,8 @@
     <Content Include="Views\Libros\Agregar.cshtml" />
     <Content Include="Views\Libros\Editar.cshtml" />
     <Content Include="Views\Libros\Detalles.cshtml" />
+    <Content Include="Views\Retiro\Index.cshtml" />
+    <Content Include="Views\Retiro\Retirar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

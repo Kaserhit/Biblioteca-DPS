@@ -26,10 +26,10 @@ namespace Proyecto_ASP.Models
         }
     
         public virtual DbSet<CAT_CUENTAS> CAT_CUENTAS { get; set; }
+        public virtual DbSet<CAT_LIBROS> CAT_LIBROS { get; set; }
         public virtual DbSet<CAT_LIBROS_DAÑADOS> CAT_LIBROS_DAÑADOS { get; set; }
         public virtual DbSet<CAT_USERS> CAT_USERS { get; set; }
         public virtual DbSet<TRA_CUENTAS> TRA_CUENTAS { get; set; }
         public virtual DbSet<TRA_IMGS> TRA_IMGS { get; set; }
-        public virtual DbSet<CAT_LIBROS> CAT_LIBROS { get; set; }
     }
 }

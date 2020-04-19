@@ -30,13 +30,13 @@ namespace Proyecto_ASP.Controllers
 
         // Busqueda
 
-        public ActionResult Busqueda(string Cadena = "")
+        public ActionResult Busqueda(string cadena)
         {
             try
             {
                 using (LibrosContext db = new LibrosContext())
                 {
-                    CAT_LIBROS Blibro = db.CAT_LIBROS.Find(Cadena);
+                    CAT_LIBROS Blibro = db.CAT_LIBROS.Find(Convert.ToInt32(cadena));
 
                     return View(Blibro);
                
@@ -98,7 +98,6 @@ namespace Proyecto_ASP.Controllers
 
                     return View(Blibro);
 
-
                 }
             }
             catch (Exception)
@@ -108,7 +107,6 @@ namespace Proyecto_ASP.Controllers
             }
 
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -131,8 +129,6 @@ namespace Proyecto_ASP.Controllers
                     Blibro.asignatura = Libro.asignatura;
                     db.SaveChanges();
                     return RedirectToAction("Index");
-
-
 
                 }
             
@@ -192,5 +188,5 @@ namespace Proyecto_ASP.Controllers
                 throw;
             }
         }
-        }
+    }
 }
