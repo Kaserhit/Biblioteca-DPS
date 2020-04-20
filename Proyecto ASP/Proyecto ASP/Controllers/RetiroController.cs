@@ -64,9 +64,44 @@ namespace Proyecto_ASP.Controllers
                 {
 
                     CAT_LIBROS Blibro = db.CAT_LIBROS.Find(Libro.isbn);
+                    Blibro.cedula = Libro.cedula;
+                    Blibro.name = Libro.name;
+                    Blibro.apellido1 = Libro.apellido1;
+                    Blibro.apellido2 = Libro.apellido2;
+                    Blibro.telefono = Libro.telefono;
+                    Blibro.fecha_solic = Libro.fecha_solic;
+                    Blibro.fecha_ent = Libro.fecha_ent;
                     Blibro.isbn = Libro.isbn;
                     Blibro.nombre = Libro.nombre;
-                    Blibro.unidades = Blibro.unidades - Libro.cantidad;
+
+                    // Lógica para retirar libros que tengan más de una unidad
+
+                    if (Libro.cantidad > 0)
+                    {
+                        if (Blibro.unidades > 1)
+                        {
+                            if (Blibro.unidades <= Libro.cantidad)
+                            {
+                                ModelState.AddModelError("", "No hay suficientes unidades de este libro");
+                                return View();
+                            }
+                            else
+                            {
+                                Blibro.unidades = Blibro.unidades - Libro.cantidad;
+                            }
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("", "No hay suficientes unidades de este libro");
+                            return View();
+                        }
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Digite un número mayor a 0");
+                        return View();
+                    }
+
                     db.SaveChanges();
                     return RedirectToAction("Index");
 

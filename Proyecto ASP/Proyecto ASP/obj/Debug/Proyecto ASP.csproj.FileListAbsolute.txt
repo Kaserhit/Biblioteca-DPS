@@ -321,3 +321,111 @@ C:\Users\Extreme PC\Desktop\S\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\obj\De
 C:\Users\Extreme PC\Desktop\S\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\obj\Debug\Proyecto ASP.csproj.CopyComplete
 C:\Users\Extreme PC\Desktop\S\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\obj\Debug\Proyecto ASP.dll
 C:\Users\Extreme PC\Desktop\S\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\obj\Debug\Proyecto ASP.pdb
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Proyecto ASP.dll.config
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Proyecto ASP.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Proyecto ASP.pdb
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\csc.exe
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\csc.exe.config
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\csc.rsp
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\csi.exe
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\csi.rsp
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\System.AppContext.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\vbc.exe
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\vbc.exe.config
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\vbc.rsp
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\VBCSCompiler.exe
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Antlr3.Runtime.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\EntityFramework.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\EntityFramework.SqlServer.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.Owin.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.Owin.Security.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Newtonsoft.Json.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Owin.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\System.Web.Helpers.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\System.Web.Mvc.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\System.Web.Optimization.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\System.Web.Razor.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\System.Web.WebPages.Deployment.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\System.Web.WebPages.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\System.Web.WebPages.Razor.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\WebGrease.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\System.Web.Helpers.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\System.Web.Mvc.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\System.Web.Optimization.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\System.Web.Razor.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\System.Web.WebPages.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\System.Web.WebPages.Deployment.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\System.Web.WebPages.Razor.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Newtonsoft.Json.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Antlr3.Runtime.pdb
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\EntityFramework.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\EntityFramework.SqlServer.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.Owin.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.Owin.Security.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\es\System.Web.Helpers.resources.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\es\System.Web.Mvc.resources.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\es\System.Web.Optimization.resources.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\es\System.Web.Razor.resources.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\es\System.Web.WebPages.resources.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\es\EntityFramework.resources.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\es\Microsoft.Owin.resources.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\es\Microsoft.Owin.Security.resources.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\obj\Debug\Proyecto ASP.csprojAssemblyReference.cache
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\obj\Debug\Proyecto ASP.csproj.CoreCompileInputs.cache
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\obj\Debug\Proyecto ASP.csproj.CopyComplete
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\obj\Debug\Proyecto ASP.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\obj\Debug\Proyecto ASP.pdb

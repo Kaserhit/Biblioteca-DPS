@@ -197,6 +197,7 @@
     <Compile Include="Models\CAT_USERS.cs">
       <DependentUpon>ModelLibros.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ClasePartial.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ModelLibros.Context.cs">
@@ -247,6 +248,11 @@
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <EntityDeploy Include="Models\ModelLibros.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelLibros.Designer.cs</LastGenOutput>
@@ -254,11 +260,6 @@
     <Content Include="Models\ModelLibros.edmx.diagram">
       <DependentUpon>ModelLibros.edmx</DependentUpon>
     </Content>
-    <Content Include="fonts\fontawesome-webfont.eot" />
-    <Content Include="fonts\fontawesome-webfont.ttf" />
-    <Content Include="fonts\fontawesome-webfont.woff" />
-    <Content Include="fonts\fontawesome-webfont.woff2" />
-    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

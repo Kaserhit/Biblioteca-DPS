@@ -23,6 +23,5 @@ namespace Proyecto_ASP.Models
         public string escuela { get; set; }
         public string tematica { get; set; }
         public string asignatura { get; set; }
-        public int cantidad { get; set; }
     }
 }
