@@ -1,0 +1,107 @@
+﻿@model Proyecto_ASP.Models.CAT_LIBROS_DAÑADOS
+
+@{
+    ViewBag.Title = "Detalles de libro Dañado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles del libro dañado</h2>
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.isbn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isbn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.autor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.autor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.editorial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.editorial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.unidades)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.unidades)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.edicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.edicion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.escuela)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.escuela)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tematica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tematica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.costo_reparacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.costo_reparacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.asignatura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.asignatura)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Editar", new { id = Model.isbn }, null) |
+    @Html.ActionLink("Regresar", "IndexDañados")
+</p>

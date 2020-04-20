@@ -1,11 +1,10 @@
-﻿@model IEnumerable<Proyecto_ASP.Models.CAT_LIBROS>
+﻿@model IEnumerable<Proyecto_ASP.Models.CAT_LIBROS_DAÑADOS>
 
 @{
-    ViewBag.Title = "Retirar";
+    ViewBag.Title = "IndexDañados";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Libros Disponibles</h2>
+<h2>Libros Dañados</h2>
 
 <table class="table">
     <tr>
@@ -32,6 +31,12 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.tematica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.costo_reparacion)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.asignatura)
@@ -67,12 +72,36 @@
                 @Html.DisplayFor(modelItem => item.tematica)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.costo_reparacion)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.asignatura)
             </td>
             <td>
-                @Html.ActionLink("Retirar", "Retirar", new { id = item.isbn }, null)
+                @Html.ActionLink("Editar", "Editar", new { id = item.isbn }, null) |
+                @Html.ActionLink("Detalles", "Detalles", new { id = item.isbn }, null) |
+                @Html.ActionLink("Eliminar", "Eliminar", new { id = item.isbn }, new { @Class = "MEliminar" })
             </td>
         </tr>
     }
 
 </table>
+
+<div>
+    @Html.ActionLink("Regresar", "Back")
+</div>
+
+
+@section scripts{
+
+    <script>
+        $(".MEliminar").click(function (event) {
+            if (!confirm('¿Esta seguro de eliminar el libro?')) {
+                event.preventDefault();
+            }
+        });
+    </script>
+}

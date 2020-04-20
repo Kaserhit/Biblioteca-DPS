@@ -178,6 +178,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LibrosController.cs" />
+    <Compile Include="Controllers\LibrosDañadosController.cs" />
     <Compile Include="Controllers\RetiroController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -296,6 +297,10 @@
     <Content Include="Views\Shared\PaginaP.cshtml" />
     <Content Include="Views\Retiro\Index.cshtml" />
     <Content Include="Views\Retiro\Retirar.cshtml" />
+    <Content Include="Views\LibrosDañados\IndexDañados.cshtml" />
+    <Content Include="Views\LibrosDañados\Editar.cshtml" />
+    <Content Include="Views\LibrosDañados\Detalles.cshtml" />
+    <Content Include="Views\Libros\LibroBaja.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

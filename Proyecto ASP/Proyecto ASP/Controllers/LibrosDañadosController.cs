@@ -7,19 +7,17 @@ using System.Web.Mvc;
 
 namespace Proyecto_ASP.Controllers
 {
-    public class LibrosController : Controller
+    public class LibrosDañadosController : Controller
     {
-
-
-        // GET: Libros
-
-        public ActionResult Index()
+        // GET: LibrosDañados
+        // Libros Dañados
+        public ActionResult IndexDañados()
         {
             try
             {
                 using (LibrosContext db = new LibrosContext())
                 {
-                    List<CAT_LIBROS> lista = db.CAT_LIBROS.ToList();
+                    List<CAT_LIBROS_DAÑADOS> lista = db.CAT_LIBROS_DAÑADOS.ToList();
                     return View(lista);
                 }
             }
@@ -29,59 +27,6 @@ namespace Proyecto_ASP.Controllers
                 throw;
             }
         }
-
-        // Busqueda
-
-        public ActionResult Buscar(int Cadena = 1)
-        {
-            try
-            {
-                using (LibrosContext db = new LibrosContext())
-                {
-                    List<CAT_LIBROS> Blibro = db.CAT_LIBROS.Where(B => B.isbn == Cadena).ToList();
-
-                    return View(Blibro);
-
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
-        // Agregar Libros
-
-        public ActionResult Agregar()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Agregar(CAT_LIBROS Libro)
-        {
-            if (!ModelState.IsValid)
-                return View();
-
-            try
-            {
-                using (var db = new LibrosContext())
-                {
-                    db.CAT_LIBROS.Add(Libro);
-                    db.SaveChanges();
-                    return RedirectToAction("Index");
-                }
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError("", "Fallo al ingresar libro -" + ex.Message);
-                return View();
-            }
-        }
-
-
 
         // Editar Libros
 
@@ -95,7 +40,7 @@ namespace Proyecto_ASP.Controllers
                 using (var db = new LibrosContext())
                 {
 
-                    CAT_LIBROS Blibro = db.CAT_LIBROS.Find(id);
+                    CAT_LIBROS_DAÑADOS Blibro = db.CAT_LIBROS_DAÑADOS.Find(id);
 
                     return View(Blibro);
 
@@ -113,14 +58,14 @@ namespace Proyecto_ASP.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Editar(CAT_LIBROS Libro)
+        public ActionResult Editar(CAT_LIBROS_DAÑADOS Libro)
         {
             try
             {
                 using (var db = new LibrosContext())
                 {
 
-                    CAT_LIBROS Blibro = db.CAT_LIBROS.Find(Libro.isbn);
+                    CAT_LIBROS_DAÑADOS Blibro = db.CAT_LIBROS_DAÑADOS.Find(Libro.isbn);
                     Blibro.isbn = Libro.isbn;
                     Blibro.nombre = Libro.nombre;
                     Blibro.autor = Libro.autor;
@@ -130,8 +75,10 @@ namespace Proyecto_ASP.Controllers
                     Blibro.unidades = Libro.unidades;
                     Blibro.tematica = Libro.tematica;
                     Blibro.asignatura = Libro.asignatura;
+                    Blibro.costo_reparacion = Libro.costo_reparacion;
+                    Blibro.descripcion = Libro.descripcion;
                     db.SaveChanges();
-                    return RedirectToAction("Index");
+                    return RedirectToAction("IndexDañados");
 
 
 
@@ -157,7 +104,7 @@ namespace Proyecto_ASP.Controllers
                 using (var db = new LibrosContext())
                 {
 
-                    CAT_LIBROS Blibro = db.CAT_LIBROS.Find(id);
+                    CAT_LIBROS_DAÑADOS Blibro = db.CAT_LIBROS_DAÑADOS.Find(id);
 
                     return View(Blibro);
                 }
@@ -180,10 +127,10 @@ namespace Proyecto_ASP.Controllers
                 using (var db = new LibrosContext())
                 {
 
-                    CAT_LIBROS Blibro = db.CAT_LIBROS.Find(id);
-                    db.CAT_LIBROS.Remove(Blibro);
+                    CAT_LIBROS_DAÑADOS Blibro = db.CAT_LIBROS_DAÑADOS.Find(id);
+                    db.CAT_LIBROS_DAÑADOS.Remove(Blibro);
                     db.SaveChanges();
-                    return RedirectToAction("Index");
+                    return RedirectToAction("IndexDañados");
                 }
             }
 
@@ -195,18 +142,13 @@ namespace Proyecto_ASP.Controllers
         }
 
 
-
-        public ActionResult Librosdañados()
-        {
-            Response.Redirect("http://localhost:53651/LibrosDa%C3%B1ados/IndexDa%C3%B1ados");
-            return View();
-        }
-
-
         public ActionResult Back()
         {
-            Response.Redirect("http://localhost:53651/Home/Index/22");
+            Response.Redirect("http://localhost:53651/Libros");
             return View();
         }
+
+
+        }
+
     }
-}

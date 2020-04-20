@@ -1,19 +1,18 @@
-﻿@model Proyecto_ASP.Models.CAT_LIBROS
+﻿@model Proyecto_ASP.Models.CAT_LIBROS_DAÑADOS
 
 @{
-    ViewBag.Title = "Editar Libro";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "LibroBaja";
+    Layout = "~/Views/_LayoutPage1.cshtml";
 }
 
-<h2>Editar informacion de libro</h2>
+<h2>LibroBaja</h2>
 
-
-@using (Html.BeginForm())
+@using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4></h4>
+        <h4>CAT_LIBROS_DAÑADOS</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -67,18 +66,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.escuela, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-               
-                <select class="form-control" id="escuela" name="escuela">
-                    <option value="Ingieneria Informatica">Ingieneria Informatica</option>
-                    <option value="Ingieneria Electronica">Ingieneria Electronica</option>
-                    <option value="Odontologia">Odontologia</option>
-                    <option value="Psicologia">Psicologia</option>
-                    <option value="Publicidad">Publicidad</option>
-                    <option value="Ingieneria Quimica">Ingieneria Quimica</option>
-                    <option value="Ingieneria Industrial">Ingieneria Industrial</option>
-                </select>
-
-
+                @Html.EditorFor(model => model.escuela, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.escuela, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -92,6 +80,22 @@
         </div>
 
         <div class="form-group">
+            @Html.LabelFor(model => model.descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.descripcion, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.descripcion, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.costo_reparacion, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.costo_reparacion, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.costo_reparacion, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
             @Html.LabelFor(model => model.asignatura, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.asignatura, new { htmlAttributes = new { @class = "form-control" } })
@@ -101,16 +105,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Regresar", "Index")
+    @Html.ActionLink("Back to List", "Index")
 </div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
