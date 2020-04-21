@@ -8,6 +8,20 @@
     <Property Name="NOMBRE_CLIENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="SALDO_ACTUAL" Type="Decimal" Precision="18" Scale="0" />
   </EntityType>
+  <EntityType Name="CAT_LIBROS">
+    <Key>
+      <PropertyRef Name="isbn" />
+    </Key>
+    <Property Name="isbn" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="autor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="editorial" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="unidades" Type="Int32" Nullable="false" />
+    <Property Name="edicion" Type="Int32" Nullable="false" />
+    <Property Name="escuela" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tematica" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="asignatura" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
   <EntityType Name="CAT_LIBROS_DAÑADOS">
     <Key>
       <PropertyRef Name="isbn" />
@@ -53,34 +67,12 @@
     <Property Name="ID_FOTO" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="IMAGEN" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
   </EntityType>
-  <EntityType Name="CAT_LIBROS">
-    <Key>
-      <PropertyRef Name="isbn" />
-      <PropertyRef Name="nombre" />
-      <PropertyRef Name="autor" />
-      <PropertyRef Name="editorial" />
-      <PropertyRef Name="unidades" />
-      <PropertyRef Name="edicion" />
-      <PropertyRef Name="escuela" />
-      <PropertyRef Name="tematica" />
-      <PropertyRef Name="asignatura" />
-    </Key>
-    <Property Name="isbn" Type="Int32" Nullable="false" />
-    <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="autor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="editorial" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="unidades" Type="Int32" Nullable="false" />
-    <Property Name="edicion" Type="Int32" Nullable="false" />
-    <Property Name="escuela" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="tematica" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="asignatura" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-  </EntityType>
   <EntityContainer Name="LibrosContext" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="CAT_CUENTAS" EntityType="Self.CAT_CUENTAS" />
+    <EntitySet Name="CAT_LIBROS" EntityType="Self.CAT_LIBROS" />
     <EntitySet Name="CAT_LIBROS_DAÑADOS" EntityType="Self.CAT_LIBROS_DAÑADOS" />
     <EntitySet Name="CAT_USERS" EntityType="Self.CAT_USERS" />
     <EntitySet Name="TRA_CUENTAS" EntityType="Self.TRA_CUENTAS" />
     <EntitySet Name="TRA_IMGS" EntityType="Self.TRA_IMGS" />
-    <EntitySet Name="CAT_LIBROS" EntityType="Self.CAT_LIBROS" />
   </EntityContainer>
 </Schema>

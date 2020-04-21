@@ -146,8 +146,6 @@ namespace Proyecto_ASP.Controllers
 
         }
 
-
-
         // Detalles Libros
         public ActionResult Detalles(int id)
         {
@@ -207,6 +205,105 @@ namespace Proyecto_ASP.Controllers
         {
             Response.Redirect("http://localhost:53651/Home/Index/22");
             return View();
+        }
+
+        //Programación para agregar libros dañados
+
+        public ActionResult IndexDañados()
+        {
+            try
+            {
+                using (LibrosContext db = new LibrosContext())
+                {
+                    List<CAT_LIBROS_DAÑADOS> lista = db.CAT_LIBROS_DAÑADOS.ToList();
+                    return View(lista);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public ActionResult AgregarDañados(int id)
+        {
+            using (var db = new LibrosContext())
+            {
+
+                CAT_LIBROS Blibro = db.CAT_LIBROS.Find(id);
+                return View(Blibro);
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AgregarDañados(CAT_LIBROS_DAÑADOS Libro)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+            try
+            {
+                using (var db = new LibrosContext())
+                {
+                    db.CAT_LIBROS_DAÑADOS.Add(Libro);
+
+                    db.SaveChanges();
+                    return RedirectToAction("IndexDañados");
+                }
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "Fallo al reportar libro dañado - " + ex.Message);
+                return View();
+            }
+        }
+
+        public ActionResult DetallesDañados(int id)
+        {
+            try
+            {
+
+                using (var db = new LibrosContext())
+                {
+
+                    CAT_LIBROS_DAÑADOS Blibro = db.CAT_LIBROS_DAÑADOS.Find(id);
+
+                    return View(Blibro);
+                }
+            }
+
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        // Eliminar Libros Dañados
+
+        public ActionResult EliminarDañados(int id)
+        {
+            try
+            {
+
+                using (var db = new LibrosContext())
+                {
+
+                    CAT_LIBROS_DAÑADOS Blibro = db.CAT_LIBROS_DAÑADOS.Find(id);
+                    db.CAT_LIBROS_DAÑADOS.Remove(Blibro);
+                    db.SaveChanges();
+                    return RedirectToAction("IndexDañados");
+                }
+            }
+
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

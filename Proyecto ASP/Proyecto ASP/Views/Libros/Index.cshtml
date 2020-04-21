@@ -13,7 +13,7 @@
 
 <p>
     @Html.ActionLink("Ingresar Libro", "Agregar") |
-    @Html.ActionLink("Libros Dañados", "Librosdañados") 
+    @Html.ActionLink("Libros Dañados", "IndexDañados") 
 
 
     <table class="table">
@@ -81,7 +81,7 @@
                 <td>
                     @Html.ActionLink("Editar", "Editar", new { id = item.isbn }, null) |
                     @Html.ActionLink("Detalles", "Detalles", new { id = item.isbn }, null) |
-                    @Html.ActionLink("Reportar dañado", "Extract", new { id = item.isbn }, null) |
+                    @Html.ActionLink("Reportar dañado", "AgregarDañados", new { id = item.isbn }, null) |
                     @Html.ActionLink("Eliminar", "Eliminar", new { id = item.isbn }, new { @Class = "MEliminar" })
                 </td>
             </tr>

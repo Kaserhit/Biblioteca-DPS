@@ -10,6 +10,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="CAT_LIBROS">
+      <EntityTypeMapping TypeName="LATVIABANKModel.CAT_LIBROS">
+        <MappingFragment StoreEntitySet="CAT_LIBROS">
+          <ScalarProperty Name="isbn" ColumnName="isbn" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="autor" ColumnName="autor" />
+          <ScalarProperty Name="editorial" ColumnName="editorial" />
+          <ScalarProperty Name="unidades" ColumnName="unidades" />
+          <ScalarProperty Name="edicion" ColumnName="edicion" />
+          <ScalarProperty Name="escuela" ColumnName="escuela" />
+          <ScalarProperty Name="tematica" ColumnName="tematica" />
+          <ScalarProperty Name="asignatura" ColumnName="asignatura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="CAT_LIBROS_DAÑADOS">
       <EntityTypeMapping TypeName="LATVIABANKModel.CAT_LIBROS_DAÑADOS">
         <MappingFragment StoreEntitySet="CAT_LIBROS_DAÑADOS">
@@ -54,21 +69,6 @@
           <ScalarProperty Name="ID_DOC" ColumnName="ID_DOC" />
           <ScalarProperty Name="ID_FOTO" ColumnName="ID_FOTO" />
           <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="CAT_LIBROS">
-      <EntityTypeMapping TypeName="LATVIABANKModel.CAT_LIBROS">
-        <MappingFragment StoreEntitySet="CAT_LIBROS">
-          <ScalarProperty Name="isbn" ColumnName="isbn" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="autor" ColumnName="autor" />
-          <ScalarProperty Name="editorial" ColumnName="editorial" />
-          <ScalarProperty Name="unidades" ColumnName="unidades" />
-          <ScalarProperty Name="edicion" ColumnName="edicion" />
-          <ScalarProperty Name="escuela" ColumnName="escuela" />
-          <ScalarProperty Name="tematica" ColumnName="tematica" />
-          <ScalarProperty Name="asignatura" ColumnName="asignatura" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

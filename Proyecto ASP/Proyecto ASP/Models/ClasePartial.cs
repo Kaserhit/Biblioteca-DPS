@@ -23,5 +23,7 @@ namespace Proyecto_ASP.Models
         public int telefono { get; set; }
         public DateTime fecha_solic { get; set; }
         public DateTime fecha_ent { get; set; }
+        public string descripcion { get; set; }
+        public int costo_reparacion { get; set; }
     }
 }

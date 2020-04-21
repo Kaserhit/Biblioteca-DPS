@@ -13,19 +13,9 @@
           <Property Name="NOMBRE_CLIENTE" Type="nvarchar" MaxLength="50" />
           <Property Name="SALDO_ACTUAL" Type="numeric" Precision="18" Scale="0" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'LATVIABANK.dbo.CAT_LIBROS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="CAT_LIBROS">
           <Key>
             <PropertyRef Name="isbn" />
-            <PropertyRef Name="nombre" />
-            <PropertyRef Name="autor" />
-            <PropertyRef Name="editorial" />
-            <PropertyRef Name="unidades" />
-            <PropertyRef Name="edicion" />
-            <PropertyRef Name="escuela" />
-            <PropertyRef Name="tematica" />
-            <PropertyRef Name="asignatura" />
           </Key>
           <Property Name="isbn" Type="int" Nullable="false" />
           <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
@@ -84,23 +74,11 @@ warning 6002: The table/view 'LATVIABANK.dbo.CAT_LIBROS' does not have a primary
         </EntityType>
         <EntityContainer Name="LATVIABANKModelStoreContainer">
           <EntitySet Name="CAT_CUENTAS" EntityType="Self.CAT_CUENTAS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CAT_LIBROS" EntityType="Self.CAT_LIBROS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CAT_LIBROS_DAÑADOS" EntityType="Self.CAT_LIBROS_DAÑADOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CAT_USERS" EntityType="Self.CAT_USERS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TRA_CUENTAS" EntityType="Self.TRA_CUENTAS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TRA_IMGS" EntityType="Self.TRA_IMGS" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="CAT_LIBROS" EntityType="Self.CAT_LIBROS" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [CAT_LIBROS].[isbn] AS [isbn], 
-    [CAT_LIBROS].[nombre] AS [nombre], 
-    [CAT_LIBROS].[autor] AS [autor], 
-    [CAT_LIBROS].[editorial] AS [editorial], 
-    [CAT_LIBROS].[unidades] AS [unidades], 
-    [CAT_LIBROS].[edicion] AS [edicion], 
-    [CAT_LIBROS].[escuela] AS [escuela], 
-    [CAT_LIBROS].[tematica] AS [tematica], 
-    [CAT_LIBROS].[asignatura] AS [asignatura]
-    FROM [dbo].[CAT_LIBROS] AS [CAT_LIBROS]</DefiningQuery>
-          </EntitySet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -114,6 +92,20 @@ warning 6002: The table/view 'LATVIABANK.dbo.CAT_LIBROS' does not have a primary
           <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="NOMBRE_CLIENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SALDO_ACTUAL" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="CAT_LIBROS">
+          <Key>
+            <PropertyRef Name="isbn" />
+          </Key>
+          <Property Name="isbn" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="autor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="editorial" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="unidades" Type="Int32" Nullable="false" />
+          <Property Name="edicion" Type="Int32" Nullable="false" />
+          <Property Name="escuela" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tematica" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="asignatura" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="CAT_LIBROS_DAÑADOS">
           <Key>
@@ -160,35 +152,13 @@ warning 6002: The table/view 'LATVIABANK.dbo.CAT_LIBROS' does not have a primary
           <Property Name="ID_FOTO" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="IMAGEN" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
         </EntityType>
-        <EntityType Name="CAT_LIBROS">
-          <Key>
-            <PropertyRef Name="isbn" />
-            <PropertyRef Name="nombre" />
-            <PropertyRef Name="autor" />
-            <PropertyRef Name="editorial" />
-            <PropertyRef Name="unidades" />
-            <PropertyRef Name="edicion" />
-            <PropertyRef Name="escuela" />
-            <PropertyRef Name="tematica" />
-            <PropertyRef Name="asignatura" />
-          </Key>
-          <Property Name="isbn" Type="Int32" Nullable="false" />
-          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="autor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="editorial" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="unidades" Type="Int32" Nullable="false" />
-          <Property Name="edicion" Type="Int32" Nullable="false" />
-          <Property Name="escuela" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="tematica" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="asignatura" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-        </EntityType>
         <EntityContainer Name="LibrosContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CAT_CUENTAS" EntityType="Self.CAT_CUENTAS" />
+          <EntitySet Name="CAT_LIBROS" EntityType="Self.CAT_LIBROS" />
           <EntitySet Name="CAT_LIBROS_DAÑADOS" EntityType="Self.CAT_LIBROS_DAÑADOS" />
           <EntitySet Name="CAT_USERS" EntityType="Self.CAT_USERS" />
           <EntitySet Name="TRA_CUENTAS" EntityType="Self.TRA_CUENTAS" />
           <EntitySet Name="TRA_IMGS" EntityType="Self.TRA_IMGS" />
-          <EntitySet Name="CAT_LIBROS" EntityType="Self.CAT_LIBROS" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -202,6 +172,21 @@ warning 6002: The table/view 'LATVIABANK.dbo.CAT_LIBROS' does not have a primary
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="NOMBRE_CLIENTE" ColumnName="NOMBRE_CLIENTE" />
                 <ScalarProperty Name="SALDO_ACTUAL" ColumnName="SALDO_ACTUAL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CAT_LIBROS">
+            <EntityTypeMapping TypeName="LATVIABANKModel.CAT_LIBROS">
+              <MappingFragment StoreEntitySet="CAT_LIBROS">
+                <ScalarProperty Name="isbn" ColumnName="isbn" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="autor" ColumnName="autor" />
+                <ScalarProperty Name="editorial" ColumnName="editorial" />
+                <ScalarProperty Name="unidades" ColumnName="unidades" />
+                <ScalarProperty Name="edicion" ColumnName="edicion" />
+                <ScalarProperty Name="escuela" ColumnName="escuela" />
+                <ScalarProperty Name="tematica" ColumnName="tematica" />
+                <ScalarProperty Name="asignatura" ColumnName="asignatura" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -252,21 +237,6 @@ warning 6002: The table/view 'LATVIABANK.dbo.CAT_LIBROS' does not have a primary
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="CAT_LIBROS">
-            <EntityTypeMapping TypeName="LATVIABANKModel.CAT_LIBROS">
-              <MappingFragment StoreEntitySet="CAT_LIBROS">
-                <ScalarProperty Name="isbn" ColumnName="isbn" />
-                <ScalarProperty Name="nombre" ColumnName="nombre" />
-                <ScalarProperty Name="autor" ColumnName="autor" />
-                <ScalarProperty Name="editorial" ColumnName="editorial" />
-                <ScalarProperty Name="unidades" ColumnName="unidades" />
-                <ScalarProperty Name="edicion" ColumnName="edicion" />
-                <ScalarProperty Name="escuela" ColumnName="escuela" />
-                <ScalarProperty Name="tematica" ColumnName="tematica" />
-                <ScalarProperty Name="asignatura" ColumnName="asignatura" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -281,10 +251,10 @@ warning 6002: The table/view 'LATVIABANK.dbo.CAT_LIBROS' does not have a primary
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

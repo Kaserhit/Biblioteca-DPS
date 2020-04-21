@@ -25,7 +25,7 @@ namespace Proyecto_ASP.Controllers
 
         void connectionString() {
 
-            con.ConnectionString = "data source=DESKTOP-O6CJGUF; database=LATVIABANK; integrated security = SSPI";
+            con.ConnectionString = "data source=DESKTOP-0V51JUM\\MSSQLSERVER01; database=LATVIABANK; integrated security = SSPI";
 
         }
 

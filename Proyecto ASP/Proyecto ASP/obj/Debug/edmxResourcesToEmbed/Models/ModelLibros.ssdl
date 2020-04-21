@@ -8,19 +8,9 @@
     <Property Name="NOMBRE_CLIENTE" Type="nvarchar" MaxLength="50" />
     <Property Name="SALDO_ACTUAL" Type="numeric" Precision="18" Scale="0" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LATVIABANK.dbo.CAT_LIBROS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="CAT_LIBROS">
     <Key>
       <PropertyRef Name="isbn" />
-      <PropertyRef Name="nombre" />
-      <PropertyRef Name="autor" />
-      <PropertyRef Name="editorial" />
-      <PropertyRef Name="unidades" />
-      <PropertyRef Name="edicion" />
-      <PropertyRef Name="escuela" />
-      <PropertyRef Name="tematica" />
-      <PropertyRef Name="asignatura" />
     </Key>
     <Property Name="isbn" Type="int" Nullable="false" />
     <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
@@ -79,22 +69,10 @@ warning 6002: The table/view 'LATVIABANK.dbo.CAT_LIBROS' does not have a primary
   </EntityType>
   <EntityContainer Name="LATVIABANKModelStoreContainer">
     <EntitySet Name="CAT_CUENTAS" EntityType="Self.CAT_CUENTAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAT_LIBROS" EntityType="Self.CAT_LIBROS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CAT_LIBROS_DAÑADOS" EntityType="Self.CAT_LIBROS_DAÑADOS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CAT_USERS" EntityType="Self.CAT_USERS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TRA_CUENTAS" EntityType="Self.TRA_CUENTAS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TRA_IMGS" EntityType="Self.TRA_IMGS" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="CAT_LIBROS" EntityType="Self.CAT_LIBROS" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [CAT_LIBROS].[isbn] AS [isbn], 
-    [CAT_LIBROS].[nombre] AS [nombre], 
-    [CAT_LIBROS].[autor] AS [autor], 
-    [CAT_LIBROS].[editorial] AS [editorial], 
-    [CAT_LIBROS].[unidades] AS [unidades], 
-    [CAT_LIBROS].[edicion] AS [edicion], 
-    [CAT_LIBROS].[escuela] AS [escuela], 
-    [CAT_LIBROS].[tematica] AS [tematica], 
-    [CAT_LIBROS].[asignatura] AS [asignatura]
-    FROM [dbo].[CAT_LIBROS] AS [CAT_LIBROS]</DefiningQuery>
-    </EntitySet>
   </EntityContainer>
 </Schema>

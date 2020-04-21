@@ -431,3 +431,5 @@ C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\obj\Debug\P
 C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\obj\Debug\Proyecto ASP.pdb
 C:\Users\andre\OneDrive\Documentos\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\itextsharp.dll
 C:\Users\andre\OneDrive\Documentos\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\itextsharp.xml
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\itextsharp.dll
+C:\Users\juego\Documents\GitHub\Biblioteca\Proyecto ASP\Proyecto ASP\bin\itextsharp.xml
