@@ -64,7 +64,7 @@ h1 {
   font-size: 2em;
 }
 mark {
-  color: #000;
+  color: #fff;
   background: #ff0;
 }
 small {
@@ -192,7 +192,7 @@ th {
   *,
   *:before,
   *:after {
-    color: #000 !important;
+    color: #fff !important;
     text-shadow: none !important;
     background: transparent !important;
     -webkit-box-shadow: none !important;
@@ -243,7 +243,7 @@ th {
   }
   .btn > .caret,
   .dropup > .btn > .caret {
-    border-top-color: #000 !important;
+    border-top-color: #fff !important;
   }
   .label {
     border: 1px solid #000;
@@ -1082,11 +1082,13 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333;
-  background-color: #fff;
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #fff;
+    background-color: #000;
+
+
 }
 input,
 button,
@@ -1133,7 +1135,7 @@ img {
   height: auto;
   padding: 4px;
   line-height: 1.42857143;
-  background-color: #fff;
+  background-color: #000;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: all .2s ease-in-out;
@@ -1183,7 +1185,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: inherit;
+  font-family: Arial;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -4589,7 +4591,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 .navbar-inverse {
-  background-color: #222;
+  background-color: #333;
   border-color: #080808;
 }
 .navbar-inverse .navbar-brand {
@@ -4960,7 +4962,7 @@ a.badge:focus {
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #eee;
+  background-color: ;
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -4968,7 +4970,7 @@ a.badge:focus {
 }
 .jumbotron p {
   margin-bottom: 15px;
-  font-size: 21px;
+  font-size: 30px;
   font-weight: 200;
 }
 .jumbotron > hr {

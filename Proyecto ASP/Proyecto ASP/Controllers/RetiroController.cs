@@ -1,4 +1,6 @@
-﻿using Proyecto_ASP.Models;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using Proyecto_ASP.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,7 +55,6 @@ namespace Proyecto_ASP.Controllers
             }
 
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Retirar(CAT_LIBROS Libro)
@@ -102,8 +103,10 @@ namespace Proyecto_ASP.Controllers
                         return View();
                     }
 
+
+
                     db.SaveChanges();
-                    return RedirectToAction("Index");
+
 
                 }
 
@@ -113,8 +116,71 @@ namespace Proyecto_ASP.Controllers
 
                 throw;
             }
+            Document pdfDoc = new Document(PageSize.LETTER, 0, 0, 0, 0);
 
+            PdfWriter.GetInstance(pdfDoc, System.Web.HttpContext.Current.Response.OutputStream);
+
+            pdfDoc.Open();
+
+
+
+
+            //imagen
+
+            string path = Server.MapPath("/images/ulacit.png");
+            Image logo = Image.GetInstance(path);
+            logo.SetAbsolutePosition(210f, 150f);
+            logo.ScaleAbsolute(204f, 53f);
+            pdfDoc.Add(logo);
+
+            // texto
+
+            pdfDoc.Add(new Paragraph("                                                                 ---------------Ticker Solicitar--------------"));
+            pdfDoc.Add(new Paragraph("                                    "));
+            pdfDoc.Add(new Paragraph("                                     "));
+            pdfDoc.Add(new Paragraph("                                                                 ...............Datos del Solicitante..............."));
+            pdfDoc.Add(new Paragraph("                                    "));
+            pdfDoc.Add(new Paragraph("                                     "));
+            pdfDoc.Add(new Paragraph("                                                          Nombre:                              " + (Libro.name)));
+            pdfDoc.Add(new Paragraph("                                                          Apellidos:                           " + (Libro.apellido1 + " " + Libro.apellido2)));
+            pdfDoc.Add(new Paragraph("                                                          Cedula:                              " + (Libro.cedula)));
+            pdfDoc.Add(new Paragraph("                                                          Telefono:                            " + (Libro.telefono)));
+            pdfDoc.Add(new Paragraph("                                    "));
+            pdfDoc.Add(new Paragraph("                                     "));
+            pdfDoc.Add(new Paragraph("                                                                  ...............Datos del Libro..............."));
+            pdfDoc.Add(new Paragraph("                                    "));
+            pdfDoc.Add(new Paragraph("                                     "));
+            pdfDoc.Add(new Paragraph("                                                          Nombre de Libro:                          " + (Libro.nombre)));
+            pdfDoc.Add(new Paragraph("                                                          ISBN del Libro:                             " + (Libro.isbn)));
+            pdfDoc.Add(new Paragraph("                                                          Cantidad de Libros Solicitados:    " + (Libro.cantidad)));
+
+            pdfDoc.Add(new Paragraph("                                    "));
+            pdfDoc.Add(new Paragraph("                                     "));
+            pdfDoc.Add(new Paragraph("                                                                  .................Datos del Prestamo................."));
+            pdfDoc.Add(new Paragraph("                                    "));
+            pdfDoc.Add(new Paragraph("                                     "));
+            pdfDoc.Add(new Paragraph("                                                        Fecha de Entrega:                   " + (Libro.fecha_ent.ToString())));
+            pdfDoc.Add(new Paragraph("                                                        Fecha de Solicitud:                  " + (Libro.fecha_solic.ToString())));
+            pdfDoc.Add(new Paragraph("                                     "));
+            pdfDoc.Add(new Paragraph("                                     "));
+            pdfDoc.Add(new Paragraph("                                                                                  Biblioteca Ulacit         "));
+            pdfDoc.Add(new Paragraph("                                                                            ___________________         "));
+
+            pdfDoc.Close();
+
+            Response.ContentType = "application/pdf";
+
+            Response.AddHeader("content-disposition", "attatchment; filename=Reporte.pdf");
+            System.Web.HttpContext.Current.Response.Write(pdfDoc);
+
+            Response.Flush();
+            Response.End();
+
+            return RedirectToAction("Index");
         }
+
+
 
     }
 }
+      
