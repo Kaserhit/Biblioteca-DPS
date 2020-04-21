@@ -183,6 +183,12 @@ namespace Proyecto_ASP.Controllers
         }
 
 
+        public ActionResult Back()
+        {
+            // Redirecionamiento al Menu
+            Response.Redirect("http://localhost:53651/Home/Index/22");
+            return View();
+        }
 
     }
 }
