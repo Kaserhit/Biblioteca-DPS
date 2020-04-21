@@ -11,95 +11,109 @@
 <h2>Consulta de Libros</h2> <img src="~/Content/images/900466.png" style="margin: 0 auto; width: 10%;" />
 
 
-<p>
-    @Html.ActionLink("Ingresar Libro", "Agregar") |
-    @Html.ActionLink("Libros Dañados", "IndexDañados") 
+                            <p>
+                                @Html.ActionLink("Ingresar Libro", "Agregar") |
+                                @Html.ActionLink("Libros Dañados", "IndexDañados")
+                                @using (Html.BeginForm("Buscar", "Libros", FormMethod.Post))
+                                {
+                                    <div>
+                                        @Html.TextBox("id", "", new { @class = "form-control" })
+                                        <button type="submit" class="btn btn-default">Buscar</button>
+                                    </div>
 
+                                }
+                                @using (Html.BeginForm("Index", "Libros", FormMethod.Post))
+                                {
+                                    <div>
+                                        <button type="submit" class="btn btn-default">Mostrar Todos</button>
+                                    </div>
 
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.isbn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.nombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.autor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.editorial)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.unidades)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.edicion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.escuela)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.tematica)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.asignatura)
-            </th>
-            <th></th>
-        </tr>
+                                }
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.isbn)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.nombre)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.autor)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.editorial)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.unidades)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.edicion)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.escuela)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.tematica)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.asignatura)
-                </td>
-                <td>
-                    @Html.ActionLink("Editar", "Editar", new { id = item.isbn }, null) |
-                    @Html.ActionLink("Detalles", "Detalles", new { id = item.isbn }, null) |
-                    @Html.ActionLink("Reportar dañado", "AgregarDañados", new { id = item.isbn }, null) |
-                    @Html.ActionLink("Eliminar", "Eliminar", new { id = item.isbn }, new { @Class = "MEliminar" })
-                </td>
-            </tr>
-        }
+                                <table class="table">
+                                    <tr>
+                                        <th>
+                                            ISBN
+                                        </th>
+                                        <th>
+                                            Nombre
+                                        </th>
+                                        <th>
+                                            Autor
+                                        </th>
+                                        <th>
+                                            Editorial
+                                        </th>
+                                        <th>
+                                            Unidades
+                                        </th>
+                                        <th>
+                                            Edicion
+                                        </th>
+                                        <th>
+                                            Escuela
+                                        </th>
+                                        <th>
+                                            Tematica
+                                        </th>
+                                        <th>
+                                            Asignatura
+                                        </th>
+                                        <th></th>
+                                    </tr>
 
-    </table>
-    <div>
-        @Html.ActionLink("Regresar", "Back")
-    </div>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.isbn)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.nombre)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.autor)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.editorial)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.unidades)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.edicion)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.escuela)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.tematica)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.asignatura)
+                                            </td>
+                                            <td>
+                                                @Html.ActionLink("Editar", "Editar", new { id = item.isbn }, null) |
+                                                @Html.ActionLink("Detalles", "Detalles", new { id = item.isbn }, null) |
+                                                @Html.ActionLink("Reportar dañado", "AgregarDañados", new { id = item.isbn }, null) |
+                                                @Html.ActionLink("Eliminar", "Eliminar", new { id = item.isbn }, new { @Class = "MEliminar" })
+                                            </td>
+                                        </tr>
+                                    }
 
-    @section scripts{
+                                </table>
+                                <div>
+                                    @Html.ActionLink("Regresar", "Back")
+                                </div>
 
-        <script>
-            $(".MEliminar").click(function (event) {
-                if (!confirm('¿Esta seguro de eliminar el libro?')) {
-                    event.preventDefault();
-                }
-            });
-        </script>
-    }
+                                @section scripts{
+
+                                    <script>
+                                        $(".MEliminar").click(function (event) {
+                                            if (!confirm('¿Esta seguro de eliminar el libro?')) {
+                                                event.preventDefault();
+                                            }
+                                        });
+                                    </script>
+                                }
 

@@ -17,6 +17,7 @@ namespace Proyecto_ASP.Controllers
         {
             try
             {
+                // Recupera la base de datos y la ingresa en la vista (index) en formato de tabla
                 using (LibrosContext db = new LibrosContext())
                 {
                     List<CAT_LIBROS> lista = db.CAT_LIBROS.ToList();
@@ -32,17 +33,18 @@ namespace Proyecto_ASP.Controllers
 
         // Busqueda
 
-        public ActionResult Buscar(int Cadena = 1)
+        public ActionResult Buscar(FormCollection item)
         {
             try
             {
-                using (LibrosContext db = new LibrosContext())
-                {
-                    List<CAT_LIBROS> Blibro = db.CAT_LIBROS.Where(B => B.isbn == Cadena).ToList();
+                // Metodo de busqueda especifica atraves del isbn 
+                string libro = item["id"];
+                LibrosContext db = new LibrosContext();
+                int id_isbn = Convert.ToInt32(libro);
 
-                    return View(Blibro);
-
-                }
+                var datos = db.CAT_LIBROS.Where(x => x.isbn == id_isbn).Select(x => x).ToList();
+                // una vez encontrado actualiza la vista (index) y el formato tabla
+                return View("~/Views/Libros/Index.cshtml", datos);
             }
             catch (Exception)
             {
@@ -55,13 +57,18 @@ namespace Proyecto_ASP.Controllers
 
         public ActionResult Agregar()
         {
+         // Metodo para mostrar la vista agregar
             return View();
         }
 
+
+        // Metodo encargado de procesosar la respuesta de la vista de agregar y asignar a la base de datos el nuevo libro
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Agregar(CAT_LIBROS Libro)
         {
+
+            // Verificamo el modelo
             if (!ModelState.IsValid)
                 return View();
 
@@ -69,6 +76,7 @@ namespace Proyecto_ASP.Controllers
             {
                 using (var db = new LibrosContext())
                 {
+                    // Añadimos los datos a la base de datos
                     db.CAT_LIBROS.Add(Libro);
                     db.SaveChanges();
                     return RedirectToAction("Index");
@@ -76,6 +84,7 @@ namespace Proyecto_ASP.Controllers
             }
             catch (Exception ex)
             {
+                // En caso de que el modelo este incorrecto mostrara un fallo
                 ModelState.AddModelError("", "Fallo al ingresar libro -" + ex.Message);
                 return View();
             }
@@ -87,6 +96,7 @@ namespace Proyecto_ASP.Controllers
 
         public ActionResult Editar(int id)
         {
+            // Metodo para mostrar la vista Editar atravez de la busqueda del isbn del libro 
             try
             {
 
@@ -111,6 +121,8 @@ namespace Proyecto_ASP.Controllers
         }
 
 
+        // Metodo encargado de procesar la respuesta de la vista de Editar y re-asignar a la base de datos el libro
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Editar(CAT_LIBROS Libro)
@@ -119,7 +131,7 @@ namespace Proyecto_ASP.Controllers
             {
                 using (var db = new LibrosContext())
                 {
-
+                    // Cambiamos los datos que se encuentran en  la base de datos
                     CAT_LIBROS Blibro = db.CAT_LIBROS.Find(Libro.isbn);
                     Blibro.isbn = Libro.isbn;
                     Blibro.nombre = Libro.nombre;
@@ -146,12 +158,13 @@ namespace Proyecto_ASP.Controllers
 
         }
 
+        
         // Detalles Libros
         public ActionResult Detalles(int id)
         {
             try
             {
-
+                // muestra la vista detalles con los datos encontrados en la base de datos
                 using (var db = new LibrosContext())
                 {
 
@@ -174,7 +187,7 @@ namespace Proyecto_ASP.Controllers
         {
             try
             {
-
+                // El metodo busca atravez del isbn el libro y procede a removerlo de la base de datos
                 using (var db = new LibrosContext())
                 {
 
@@ -196,6 +209,7 @@ namespace Proyecto_ASP.Controllers
 
         public ActionResult Librosdañados()
         {
+            // Redirecionamiento a la base de datos de los libros dañados
             Response.Redirect("http://localhost:53651/LibrosDa%C3%B1ados/IndexDa%C3%B1ados");
             return View();
         }
@@ -203,14 +217,18 @@ namespace Proyecto_ASP.Controllers
 
         public ActionResult Back()
         {
+            // Redirecionamiento al Menu
             Response.Redirect("http://localhost:53651/Home/Index/22");
             return View();
         }
 
-        //Programación para agregar libros dañados
+
+
+     
 
         public ActionResult IndexDañados()
         {
+            // Metodo para mostrar la base  de datos que contiene los libros dañados
             try
             {
                 using (LibrosContext db = new LibrosContext())
@@ -225,7 +243,7 @@ namespace Proyecto_ASP.Controllers
                 throw;
             }
         }
-
+        //Programación para agregar libros dañados mostrando la vista para asignar el daño
         public ActionResult AgregarDañados(int id)
         {
             using (var db = new LibrosContext())
@@ -236,6 +254,8 @@ namespace Proyecto_ASP.Controllers
             }
         }
 
+
+        // Metodo que escucha la vista y asigna los datos
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult AgregarDañados(CAT_LIBROS_DAÑADOS Libro)
@@ -260,6 +280,8 @@ namespace Proyecto_ASP.Controllers
             }
         }
 
+
+        // Metodo para obtener detalles del libro dañado en una vista exclusiva
         public ActionResult DetallesDañados(int id)
         {
             try
@@ -288,7 +310,7 @@ namespace Proyecto_ASP.Controllers
         {
             try
             {
-
+                // Metodo para eliminar un libro que se encuentre dañado en la base de datos
                 using (var db = new LibrosContext())
                 {
 

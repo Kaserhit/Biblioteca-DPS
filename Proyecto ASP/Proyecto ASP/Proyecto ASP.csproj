@@ -182,46 +182,56 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LibrosController.cs" />
     <Compile Include="Controllers\RetiroController.cs" />
+    <Compile Include="Controllers\SolicitudController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CAT_CUENTAS.cs">
-      <DependentUpon>ModelLibros.tt</DependentUpon>
+      <DependentUpon>ModeloLibros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CAT_LIBROS.cs">
-      <DependentUpon>ModelLibros.tt</DependentUpon>
+      <DependentUpon>ModeloLibros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CAT_LIBROS_DAÑADOS.cs">
-      <DependentUpon>ModelLibros.tt</DependentUpon>
+      <DependentUpon>ModeloLibros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CAT_RECUPERAR.cs">
+      <DependentUpon>ModeloLibros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CAT_SOLICITUD.cs">
+      <DependentUpon>ModeloLibros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CAT_USERS.cs">
-      <DependentUpon>ModelLibros.tt</DependentUpon>
+      <DependentUpon>ModeloLibros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CAT_USUARIO.cs">
+      <DependentUpon>ModeloLibros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ClasePartial.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\ModelLibros.Context.cs">
+    <Compile Include="Models\ModeloLibros.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelLibros.Context.tt</DependentUpon>
+      <DependentUpon>ModeloLibros.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ModelLibros.cs">
+    <Compile Include="Models\ModeloLibros.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelLibros.tt</DependentUpon>
+      <DependentUpon>ModeloLibros.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ModelLibros.Designer.cs">
+    <Compile Include="Models\ModeloLibros.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelLibros.edmx</DependentUpon>
+      <DependentUpon>ModeloLibros.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\TRA_CUENTAS.cs">
-      <DependentUpon>ModelLibros.tt</DependentUpon>
+      <DependentUpon>ModeloLibros.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TRA_IMGS.cs">
-      <DependentUpon>ModelLibros.tt</DependentUpon>
+      <DependentUpon>ModeloLibros.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -248,15 +258,15 @@
     <Content Include="Content\Site.css" />
     <Content Include="images\bg.jpg" />
     <Content Include="images\ulacit.png" />
-    <Content Include="Models\ModelLibros.Context.tt">
+    <Content Include="Models\ModeloLibros.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelLibros.edmx</DependentUpon>
-      <LastGenOutput>ModelLibros.Context.cs</LastGenOutput>
+      <DependentUpon>ModeloLibros.edmx</DependentUpon>
+      <LastGenOutput>ModeloLibros.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\ModelLibros.tt">
+    <Content Include="Models\ModeloLibros.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelLibros.edmx</DependentUpon>
-      <LastGenOutput>ModelLibros.cs</LastGenOutput>
+      <DependentUpon>ModeloLibros.edmx</DependentUpon>
+      <LastGenOutput>ModeloLibros.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -265,12 +275,12 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
-    <EntityDeploy Include="Models\ModelLibros.edmx">
+    <EntityDeploy Include="Models\ModeloLibros.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelLibros.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModeloLibros.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\ModelLibros.edmx.diagram">
-      <DependentUpon>ModelLibros.edmx</DependentUpon>
+    <Content Include="Models\ModeloLibros.edmx.diagram">
+      <DependentUpon>ModeloLibros.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -314,6 +324,7 @@
     <Content Include="Views\Libros\DetallesDañados.cshtml" />
     <Content Include="Views\Libros\AgregarDañados.cshtml" />
     <Content Include="Views\Libros\IndexDañados.cshtml" />
+    <Content Include="Views\Solicitud\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

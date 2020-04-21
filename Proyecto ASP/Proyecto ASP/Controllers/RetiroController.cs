@@ -15,6 +15,7 @@ namespace Proyecto_ASP.Controllers
 
         public ActionResult Index()
         {
+            // Metodo para mostrar la tabla de los libros disponibles a solicitar
             try
             {
                 using (LibrosContext db = new LibrosContext())
@@ -32,6 +33,7 @@ namespace Proyecto_ASP.Controllers
 
         // Retirar Libros
 
+        // Metodo para realizar la solicitud, rellenar el formulario y generar el pdf
         public ActionResult Retirar(int id)
         {
             try
@@ -70,7 +72,7 @@ namespace Proyecto_ASP.Controllers
                     Blibro.apellido1 = Libro.apellido1;
                     Blibro.apellido2 = Libro.apellido2;
                     Blibro.telefono = Libro.telefono;
-                    Blibro.fecha_solic = Libro.fecha_solic;
+                    Blibro.fecha_solic = DateTime.Now;
                     Blibro.fecha_ent = Libro.fecha_ent;
                     Blibro.isbn = Libro.isbn;
                     Blibro.nombre = Libro.nombre;
@@ -116,6 +118,8 @@ namespace Proyecto_ASP.Controllers
 
                 throw;
             }
+
+            // Programacion correspondiente para crear un pdf
             Document pdfDoc = new Document(PageSize.LETTER, 0, 0, 0, 0);
 
             PdfWriter.GetInstance(pdfDoc, System.Web.HttpContext.Current.Response.OutputStream);
@@ -172,11 +176,10 @@ namespace Proyecto_ASP.Controllers
 
             Response.AddHeader("content-disposition", "attatchment; filename=Reporte.pdf");
             System.Web.HttpContext.Current.Response.Write(pdfDoc);
-
             Response.Flush();
             Response.End();
 
-            return RedirectToAction("Index");
+            return RedirectToAction("~/Views/Libros/Index.cshtml");
         }
 
 

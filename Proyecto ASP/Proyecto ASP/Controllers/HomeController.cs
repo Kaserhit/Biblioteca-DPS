@@ -10,6 +10,7 @@ namespace Proyecto_ASP.Controllers
     {
         public ActionResult Index()
         {
+            // Muestra la vista Home(Menu)
             return View();
         }
 

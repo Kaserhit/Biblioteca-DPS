@@ -43,6 +43,29 @@
           <Property Name="costo_reparacion" Type="int" Nullable="false" />
           <Property Name="asignatura" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
+        <EntityType Name="CAT_RECUPERAR">
+          <Key>
+            <PropertyRef Name="isbn" />
+          </Key>
+          <Property Name="isbn" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="cedula" Type="int" Nullable="false" />
+          <Property Name="fechasoli" Type="date" Nullable="false" />
+          <Property Name="fechaentrega" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CAT_SOLICITUD">
+          <Key>
+            <PropertyRef Name="cedula" />
+          </Key>
+          <Property Name="cedula" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="apellido1" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="apellido2" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="iscb" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="nombrelibro" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="fechasoli" Type="date" Nullable="false" />
+          <Property Name="fechaentrega" Type="date" Nullable="false" />
+        </EntityType>
         <EntityType Name="CAT_USERS">
           <Key>
             <PropertyRef Name="ID_USER" />
@@ -51,6 +74,18 @@
           <Property Name="USERNAME" Type="nvarchar" MaxLength="20" />
           <Property Name="PASSWORD" Type="nvarchar" MaxLength="20" />
           <Property Name="STATUS" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="CAT_USUARIO">
+          <Key>
+            <PropertyRef Name="cedula" />
+          </Key>
+          <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="apellido1" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="apellido2" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="cedula" Type="int" Nullable="false" />
+          <Property Name="numtel" Type="int" Nullable="false" />
+          <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="direccion" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="TRA_CUENTAS">
           <Key>
@@ -76,7 +111,10 @@
           <EntitySet Name="CAT_CUENTAS" EntityType="Self.CAT_CUENTAS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CAT_LIBROS" EntityType="Self.CAT_LIBROS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CAT_LIBROS_DAÑADOS" EntityType="Self.CAT_LIBROS_DAÑADOS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CAT_RECUPERAR" EntityType="Self.CAT_RECUPERAR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CAT_SOLICITUD" EntityType="Self.CAT_SOLICITUD" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CAT_USERS" EntityType="Self.CAT_USERS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CAT_USUARIO" EntityType="Self.CAT_USUARIO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TRA_CUENTAS" EntityType="Self.TRA_CUENTAS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TRA_IMGS" EntityType="Self.TRA_IMGS" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -123,6 +161,29 @@
           <Property Name="costo_reparacion" Type="Int32" Nullable="false" />
           <Property Name="asignatura" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
+        <EntityType Name="CAT_RECUPERAR">
+          <Key>
+            <PropertyRef Name="isbn" />
+          </Key>
+          <Property Name="isbn" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cedula" Type="Int32" Nullable="false" />
+          <Property Name="fechasoli" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="fechaentrega" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="CAT_SOLICITUD">
+          <Key>
+            <PropertyRef Name="cedula" />
+          </Key>
+          <Property Name="cedula" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="apellido1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="apellido2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="iscb" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="nombrelibro" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="fechasoli" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="fechaentrega" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
         <EntityType Name="CAT_USERS">
           <Key>
             <PropertyRef Name="ID_USER" />
@@ -131,6 +192,18 @@
           <Property Name="USERNAME" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="PASSWORD" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="STATUS" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CAT_USUARIO">
+          <Key>
+            <PropertyRef Name="cedula" />
+          </Key>
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="apellido1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="apellido2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cedula" Type="Int32" Nullable="false" />
+          <Property Name="numtel" Type="Int32" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="direccion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="TRA_CUENTAS">
           <Key>
@@ -156,7 +229,10 @@
           <EntitySet Name="CAT_CUENTAS" EntityType="Self.CAT_CUENTAS" />
           <EntitySet Name="CAT_LIBROS" EntityType="Self.CAT_LIBROS" />
           <EntitySet Name="CAT_LIBROS_DAÑADOS" EntityType="Self.CAT_LIBROS_DAÑADOS" />
+          <EntitySet Name="CAT_RECUPERAR" EntityType="Self.CAT_RECUPERAR" />
+          <EntitySet Name="CAT_SOLICITUD" EntityType="Self.CAT_SOLICITUD" />
           <EntitySet Name="CAT_USERS" EntityType="Self.CAT_USERS" />
+          <EntitySet Name="CAT_USUARIO" EntityType="Self.CAT_USUARIO" />
           <EntitySet Name="TRA_CUENTAS" EntityType="Self.TRA_CUENTAS" />
           <EntitySet Name="TRA_IMGS" EntityType="Self.TRA_IMGS" />
         </EntityContainer>
@@ -207,6 +283,31 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="CAT_RECUPERAR">
+            <EntityTypeMapping TypeName="LATVIABANKModel.CAT_RECUPERAR">
+              <MappingFragment StoreEntitySet="CAT_RECUPERAR">
+                <ScalarProperty Name="isbn" ColumnName="isbn" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="fechasoli" ColumnName="fechasoli" />
+                <ScalarProperty Name="fechaentrega" ColumnName="fechaentrega" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CAT_SOLICITUD">
+            <EntityTypeMapping TypeName="LATVIABANKModel.CAT_SOLICITUD">
+              <MappingFragment StoreEntitySet="CAT_SOLICITUD">
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellido1" ColumnName="apellido1" />
+                <ScalarProperty Name="apellido2" ColumnName="apellido2" />
+                <ScalarProperty Name="iscb" ColumnName="iscb" />
+                <ScalarProperty Name="nombrelibro" ColumnName="nombrelibro" />
+                <ScalarProperty Name="fechasoli" ColumnName="fechasoli" />
+                <ScalarProperty Name="fechaentrega" ColumnName="fechaentrega" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="CAT_USERS">
             <EntityTypeMapping TypeName="LATVIABANKModel.CAT_USERS">
               <MappingFragment StoreEntitySet="CAT_USERS">
@@ -214,6 +315,19 @@
                 <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
                 <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
                 <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CAT_USUARIO">
+            <EntityTypeMapping TypeName="LATVIABANKModel.CAT_USUARIO">
+              <MappingFragment StoreEntitySet="CAT_USUARIO">
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellido1" ColumnName="apellido1" />
+                <ScalarProperty Name="apellido2" ColumnName="apellido2" />
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="numtel" ColumnName="numtel" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -251,7 +365,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />

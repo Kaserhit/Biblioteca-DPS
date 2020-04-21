@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LATVIABANKModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CAT_CUENTAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="NOMBRE_CLIENTE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SALDO_ACTUAL" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="CAT_LIBROS">
+    <Key>
+      <PropertyRef Name="isbn" />
+    </Key>
+    <Property Name="isbn" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="autor" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="editorial" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="unidades" Type="int" Nullable="false" />
+    <Property Name="edicion" Type="int" Nullable="false" />
+    <Property Name="escuela" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="tematica" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="asignatura" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CAT_LIBROS_DAÑADOS">
+    <Key>
+      <PropertyRef Name="isbn" />
+    </Key>
+    <Property Name="isbn" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="autor" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="editorial" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="unidades" Type="int" Nullable="false" />
+    <Property Name="edicion" Type="int" Nullable="false" />
+    <Property Name="escuela" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="tematica" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="costo_reparacion" Type="int" Nullable="false" />
+    <Property Name="asignatura" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CAT_RECUPERAR">
+    <Key>
+      <PropertyRef Name="isbn" />
+    </Key>
+    <Property Name="isbn" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="cedula" Type="int" Nullable="false" />
+    <Property Name="fechasoli" Type="date" Nullable="false" />
+    <Property Name="fechaentrega" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CAT_SOLICITUD">
+    <Key>
+      <PropertyRef Name="cedula" />
+    </Key>
+    <Property Name="cedula" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="apellido1" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="apellido2" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="iscb" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="nombrelibro" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="fechasoli" Type="date" Nullable="false" />
+    <Property Name="fechaentrega" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CAT_USERS">
+    <Key>
+      <PropertyRef Name="ID_USER" />
+    </Key>
+    <Property Name="ID_USER" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="USERNAME" Type="nvarchar" MaxLength="20" />
+    <Property Name="PASSWORD" Type="nvarchar" MaxLength="20" />
+    <Property Name="STATUS" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CAT_USUARIO">
+    <Key>
+      <PropertyRef Name="cedula" />
+    </Key>
+    <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="apellido1" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="apellido2" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="cedula" Type="int" Nullable="false" />
+    <Property Name="numtel" Type="int" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="direccion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TRA_CUENTAS">
+    <Key>
+      <PropertyRef Name="ID_CUENTA" />
+      <PropertyRef Name="ID_MOVTO" />
+    </Key>
+    <Property Name="ID_CUENTA" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ID_MOVTO" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="MONTO_MOVTO" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="FECHA" Type="nvarchar" MaxLength="10" />
+    <Property Name="HORA" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="TRA_IMGS">
+    <Key>
+      <PropertyRef Name="ID_DOC" />
+      <PropertyRef Name="ID_FOTO" />
+    </Key>
+    <Property Name="ID_DOC" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ID_FOTO" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="IMAGEN" Type="varbinary(max)" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="LATVIABANKModelStoreContainer">
+    <EntitySet Name="CAT_CUENTAS" EntityType="Self.CAT_CUENTAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAT_LIBROS" EntityType="Self.CAT_LIBROS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAT_LIBROS_DAÑADOS" EntityType="Self.CAT_LIBROS_DAÑADOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAT_RECUPERAR" EntityType="Self.CAT_RECUPERAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAT_SOLICITUD" EntityType="Self.CAT_SOLICITUD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAT_USERS" EntityType="Self.CAT_USERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAT_USUARIO" EntityType="Self.CAT_USUARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRA_CUENTAS" EntityType="Self.TRA_CUENTAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRA_IMGS" EntityType="Self.TRA_IMGS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Proyecto_ASP.Models.CAT_SOLICITUD>
+
+@{
+    ViewBag.Title = "Recepcion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Recepcion de Lbros</h2>
+
+<p>
+    @using (Html.BeginForm("Buscar", "Solicitud", FormMethod.Post))
+    {
+        <div>
+            @Html.TextBox("id", "", new { @class = "form-control" })
+            <button type="submit" class="btn btn-default">Buscar</button>
+        </div>
+
+    }
+    @using (Html.BeginForm("Index", "Solicitud", FormMethod.Post))
+    {
+        <div>
+            <button type="submit" class="btn btn-default">Mostrar Todos</button>
+        </div>
+
+    }
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Cedula
+        </th>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Primer Apellido
+        </th>
+        <th>
+            Segundo Apellido
+        </th>
+        <th>
+            ISBN
+        </th>
+        <th>
+            Nombre del Libro
+        </th>
+        <th>
+            Fecha de Solicitud
+        </th>
+        <th>
+            Fecha de Entrega
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cedula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.apellido1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.apellido2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.iscb)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombrelibro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechasoli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechaentrega)
+            </td>
+            <td>
+                @Html.ActionLink("Eliminar", "Eliminar", new { id = item.cedula }, new { @Class = "MEliminar" })
+            </td>
+        </tr>
+    }
+
+</table>
